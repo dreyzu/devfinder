@@ -8,7 +8,7 @@ export const SearchBar = () => {
         <Flex
             mx="24px"
             mb="16px"
-            w="327px"
+            w="300px"
             h="60px"
             justifyContent="center"
             alignItems="center"
@@ -27,7 +27,7 @@ export const SearchBar = () => {
                 fontFamily="space mono"
                 _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
             />
-            <Button ml="7px" w="84px" h="46px" mr="7px" borderRadius="10px" background="blue" color="white">
+            <Button ml="7px" w="84px" h="40px" mr="7px" borderRadius="10px" background="blue" color="white">
                 Search
             </Button>
         </Flex>
