@@ -1,6 +1,6 @@
 import "@fontsource/space-mono";
 
-import { Button, Flex, Icon, Input, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Button, Flex, Icon, Input, Spacer, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
 
 export const SearchBar = () => {
     const { toggleColorMode, colorMode } = useColorMode();
@@ -8,7 +8,7 @@ export const SearchBar = () => {
         <Flex
             mx="24px"
             mb="16px"
-            w="300px"
+            w={["300px", "573px", "730px"]}
             h="60px"
             justifyContent="center"
             alignItems="center"
@@ -21,12 +21,13 @@ export const SearchBar = () => {
                 placeholder="Search GitHub username..."
                 variant="unstyled"
                 ml="9px"
-                w="184px"
+                w={["184px", "250px", "254px"]}
                 h="25px"
-                fontSize="10px"
+                fontSize={["10px", "13px", "16px"]}
                 fontFamily="space mono"
                 _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
             />
+            <Spacer display={["none", "none", "flex"]} />
             <Button ml="7px" w="84px" h="40px" mr="7px" borderRadius="10px" background="blue" color="white">
                 Search
             </Button>

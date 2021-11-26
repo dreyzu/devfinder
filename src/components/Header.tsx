@@ -5,7 +5,15 @@ import { Box, Button, Flex, Heading, Icon, Spacer, Text, useColorMode, useColorM
 export const Header = () => {
     const { toggleColorMode, colorMode } = useColorMode();
     return (
-        <Flex mt="31px" mx="24px" mb="36px" w="300px" h="38px" alignItems="flex-start" justifyContent="center">
+        <Flex
+            mt="31px"
+            mx="24px"
+            mb="36px"
+            w={["300px", "573px", "730px"]}
+            h="38px"
+            alignItems="flex-start"
+            justifyContent="center"
+        >
             <Text fontFamily="space mono" fontWeight="bold" fontSize="26px">
                 devfinder
             </Text>

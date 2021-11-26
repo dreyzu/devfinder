@@ -6,7 +6,7 @@ export const Profile = () => {
     const { toggleColorMode, colorMode } = useColorMode();
     return (
         <Flex
-            w="300px"
+            w={["300px", "573px", "730px"]}
             h="517px"
             borderRadius="15px"
             alignItems="flex-start"
