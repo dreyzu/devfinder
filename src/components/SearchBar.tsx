@@ -21,7 +21,7 @@ export const SearchBar = () => {
                 placeholder="Search GitHub username..."
                 variant="unstyled"
                 ml="9px"
-                w={["184px", "250px", "254px"]}
+                w={["184px", "250px", "600px"]}
                 h="25px"
                 fontSize={["10px", "13px", "16px"]}
                 fontFamily="space mono"
