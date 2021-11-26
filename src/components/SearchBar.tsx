@@ -23,7 +23,7 @@ export const SearchBar = () => {
                 ml="9px"
                 w="184px"
                 h="25px"
-                fontSize="12px"
+                fontSize="10px"
                 fontFamily="space mono"
                 _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
             />
