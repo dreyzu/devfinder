@@ -1,6 +1,6 @@
 import "@fontsource/space-mono";
 
-import { Button, Flex, Icon, Input, Spacer, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Button, Flex, Icon, Input, Spacer, useColorMode, useColorModeValue } from "@chakra-ui/react";
 
 export const SearchBar = () => {
     const { toggleColorMode, colorMode } = useColorMode();
