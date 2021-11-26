@@ -1,21 +1,18 @@
 import "./App.css";
 
-import { ChakraProvider, Flex, extendTheme } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { QueryClient, QueryClientProvider } from "react-query";
 
-import { Demo } from "./components/Demo";
+import { HomePage } from "./components/Homepage";
+import { theme } from "./theme";
 
 const queryClient = new QueryClient();
 
-const theme = extendTheme({ config: { initialColorMode: "light" } });
-
-function App() {
+function App({ children, ...props }) {
     return (
         <QueryClientProvider client={queryClient}>
             <ChakraProvider theme={theme}>
-                <Flex direction="column" boxSize="100%">
-                    <Demo />
-                </Flex>
+                <HomePage />
             </ChakraProvider>
         </QueryClientProvider>
     );
