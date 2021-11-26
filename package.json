@@ -11,6 +11,7 @@
         "@chakra-ui/react": "^1.6.5",
         "@emotion/react": "^11",
         "@emotion/styled": "^11",
+        "@fontsource/space-mono": "^4.5.0",
         "@pastable/core": "^0.1.9",
         "@xstate/react": "^1.5.1",
         "axios": "^0.21.1",
