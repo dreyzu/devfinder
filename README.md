@@ -50,6 +50,7 @@ will be added as soon as the project is finished
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Chakra-UI](https://chakra-ui.com/) - For styles
+- [Vite](https://vitejs.dev/)
 
 ### What I learned
 
