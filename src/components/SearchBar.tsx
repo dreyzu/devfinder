@@ -21,6 +21,7 @@ export const SearchBar = () => {
             mb="16px"
             w={["300px", "573px", "730px"]}
             h="60px"
+            minHeight="60px"
             justifyContent="center"
             alignItems="center"
             border="0px"
@@ -30,7 +31,7 @@ export const SearchBar = () => {
             <FormControl>
                 <Flex>
                     <InputGroup>
-                        <InputLeftElement pointerEvents="none" children={<SearchIcon ml="16px" w="20px" h="20px" />} />
+                        <InputLeftElement pointerEvents="none" children={<SearchIcon ml="16px" />} />
                         <Input
                             placeholder="Search GitHub username..."
                             variant="unstyled"
