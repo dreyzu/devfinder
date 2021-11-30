@@ -1,6 +1,17 @@
 import "@fontsource/space-mono";
 
-import { Button, Flex, Icon, Input, Spacer, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import {
+    Button,
+    Flex,
+    FormControl,
+    Icon,
+    Input,
+    InputGroup,
+    InputLeftElement,
+    Spacer,
+    useColorMode,
+    useColorModeValue,
+} from "@chakra-ui/react";
 
 export const SearchBar = () => {
     const { toggleColorMode, colorMode } = useColorMode();
@@ -16,21 +27,37 @@ export const SearchBar = () => {
             borderRadius="15px"
             background={useColorModeValue("white", "blue-high")}
         >
-            <SearchIcon ml="16px" w="20px" h="20px" />
-            <Input
-                placeholder="Search GitHub username..."
-                variant="unstyled"
-                ml="9px"
-                w={["184px", "250px", "600px"]}
-                h="25px"
-                fontSize={["10px", "13px", "16px"]}
-                fontFamily="space mono"
-                _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
-            />
-            <Spacer display={["none", "none", "flex"]} />
-            <Button ml="7px" w="84px" h="40px" mr="7px" borderRadius="10px" background="blue" color="white">
-                Search
-            </Button>
+            <FormControl>
+                <Flex>
+                    <InputGroup>
+                        <InputLeftElement pointerEvents="none" children={<SearchIcon ml="16px" w="20px" h="20px" />} />
+                        <Input
+                            placeholder="Search GitHub username..."
+                            variant="unstyled"
+                            ml="9px"
+                            w={["184px", "250px", "600px"]}
+                            h="25px"
+                            fontSize={["10px", "13px", "16px"]}
+                            fontFamily="space mono"
+                            _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
+                            type="search"
+                        />
+                    </InputGroup>
+                    <Spacer display={["none", "none", "flex"]} />
+                    <Button
+                        ml="7px"
+                        w="84px"
+                        h="40px"
+                        mr="7px"
+                        borderRadius="10px"
+                        background="blue"
+                        color="white"
+                        type="submit"
+                    >
+                        Search
+                    </Button>
+                </Flex>
+            </FormControl>
         </Flex>
     );
 };
