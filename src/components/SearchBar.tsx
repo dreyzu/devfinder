@@ -19,7 +19,7 @@ export const SearchBar = () => {
         <Flex
             mx="24px"
             mb="16px"
-            w={["300px", "573px", "730px"]}
+            w={["300px", "573px", "573px", "730px"]}
             h="60px"
             minHeight="60px"
             justifyContent="center"
@@ -36,7 +36,7 @@ export const SearchBar = () => {
                             placeholder="Search GitHub username..."
                             variant="unstyled"
                             ml={["8px", "24px"]}
-                            fontSize={["10px", "13px", "16px"]}
+                            fontSize={["10px", "18px"]}
                             fontFamily="space mono"
                             _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
                             type="search"
