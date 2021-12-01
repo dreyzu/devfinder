@@ -2,6 +2,7 @@ import "@fontsource/space-mono";
 
 import { Flex, Image } from "@chakra-ui/react";
 
+import { ImageDiv } from "./card-parts/cards-desktop/ImageDiv";
 import { Description } from "./card-parts/Description";
 import { Socials } from "./card-parts/Socials";
 import { Stats } from "./card-parts/Stats";
@@ -18,14 +19,8 @@ export const Card = () => {
             pl={["20px", "40px", "40px", 0]}
             pr={["20px", "40px", "40px", 0]}
         >
-            <Flex direction="column" mt="48px" display={["none", "none", "none", "flex"]} ml="48px" h="100%" w="117px">
-                <Image
-                    borderRadius="full"
-                    boxSize={["70px", "117px"]}
-                    src="https://bit.ly/dan-abramov"
-                    alt="Dan Abramov"
-                />
-            </Flex>
+            {/* ImageDiv is for desktop device only */}
+            <ImageDiv />
             <Flex
                 direction="column"
                 justifyContent="flex-start"
