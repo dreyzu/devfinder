@@ -7,11 +7,13 @@ export const Profile = () => {
     return (
         <Flex
             w={["300px", "573px", "730px"]}
-            h="517px"
+            h={["517px", "481px", "611px"]}
+            minHeight="481px"
             borderRadius="15px"
             alignItems="flex-start"
             justifyContent="center"
             background={useColorModeValue("white", "blue-high")}
+            mb="100px"
         ></Flex>
     );
 };
