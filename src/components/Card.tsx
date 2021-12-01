@@ -1,11 +1,8 @@
 import "@fontsource/space-mono";
 
 import { Box, Flex, Heading, Image, Link, Text, useColorModeValue } from "@chakra-ui/react";
-import { useRemoteData } from "react-hook-remotedata";
 
 export const Card = () => {
-    const { data, loading, error } = useRemoteData();
-    if (error) return <Box children="error" />;
     return (
         <Flex direction="row" w="100%" h="100%" fontFamily="space mono" justifyContent="flex-start">
             <Flex direction="row" w="230px" h="70px" mt="32px" fontFamily="space mono" ml="24px">
