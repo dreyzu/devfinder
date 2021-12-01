@@ -2111,14 +2111,6 @@ csstype@^3.0.2, csstype@^3.0.6:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.8.tgz#d2266a792729fb227cd216fb572f43728e1ad340"
   integrity sha512-jXKhWqXPmlUeoQnF/EhTtTl4C9SnrxSH/jZUih3jmO6lBKr99rP3/+FmrMj4EFpOXzMtXHAZkd3x0E6h6Fgflw==
 
-daggy@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/daggy/-/daggy-1.5.0.tgz#82d9818a614e018a7ebb68f53a10970493293ee8"
-  integrity sha512-BQMsnneUmsqvPth/o+Cv9JPhQwjR0aqzDckMxH0tAdupsdFkePKVFFvhoB7HDtMnOJDxA/U4994MV/bNSJ28gw==
-  dependencies:
-    sanctuary-show "2.0.0"
-    sanctuary-type-identifiers "1.0.0"
-
 debug@^4.1.0, debug@^4.1.1, debug@^4.3.2:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
@@ -2930,11 +2922,6 @@ react-hook-form@^7.11.1:
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.11.1.tgz#936f8a14bdf02b0791c2130d7c78c49c10e6de09"
   integrity sha512-lBt428oU03dNUF5qZy5xqEdANaH3L/ilKWQS2t8wD6zF7FypOv46kEkZmg+oHf3n2xgeGYJgbMIGtYExsfKJ8A==
 
-react-hook-remotedata@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/react-hook-remotedata/-/react-hook-remotedata-0.0.1.tgz#5703ee6453590d3ab577a8769a2f17a0bc1c8c00"
-  integrity sha512-fDemoSi0IaAxs/6gmY4iHbMDjzCuw8CDfN7mO3QZPka2Ms2v87437hdYJ+MavNS97rjtui0/wiNznxlYc2Q1NQ==
-
 react-icons@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.2.0.tgz#6dda80c8a8f338ff96a1851424d63083282630d0"
@@ -3145,16 +3132,6 @@ safe-buffer@~5.1.1:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
   integrity sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
-
-sanctuary-show@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/sanctuary-show/-/sanctuary-show-2.0.0.tgz#2326b4744f4b0f993f18ca56a29f68a50f514637"
-  integrity sha512-REj4ZiioUXnDLj6EpJ9HcYDIEGaEexmB9Fg5o6InZR9f0x5PfnnC21QeU9SZ9E7G8zXSZPNjy8VRUK4safbesw==
-
-sanctuary-type-identifiers@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/sanctuary-type-identifiers/-/sanctuary-type-identifiers-1.0.0.tgz#e8f359f006cb5e624cfb8464603fc114608bde9f"
-  integrity sha1-6PNZ8AbLXmJM+4RkYD/BFGCL3p8=
 
 scheduler@^0.20.2:
   version "0.20.2"
