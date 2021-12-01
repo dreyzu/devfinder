@@ -15,7 +15,7 @@ export const theme = extendTheme({
         "pale-blue": "#4B6A9B",
         "grey-black": "#2B3442",
         "grey-white": "#F6F8FF",
-        "marine-blue": "220°, 57%, 18%",
+        "marine-blue": "#141D2F",
         "blue-high": "#1E2A47",
     },
 });
