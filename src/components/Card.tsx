@@ -1,28 +1,46 @@
 import "@fontsource/space-mono";
 
-import { Box, Flex, Heading, Image, Link, Text, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Image } from "@chakra-ui/react";
+
+import { Description } from "./card-parts/Description";
+import { Socials } from "./card-parts/Socials";
+import { Stats } from "./card-parts/Stats";
+import { Summary } from "./card-parts/Summary";
 
 export const Card = () => {
     return (
-        <Flex direction="row" w="100%" h="100%" fontFamily="space mono" justifyContent="flex-start">
-            <Flex direction="row" w="230px" h="70px" mt="32px" fontFamily="space mono" ml="24px">
-                <Image borderRadius="full" boxSize="70px" src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
-                <Flex direction="column" ml="20px" justifyContent="center">
-                    <Heading
-                        fontSize="16px"
-                        fontWeight="bold"
-                        fontFamily="space mono"
-                        color={useColorModeValue("grey-black", "white")}
-                    >
-                        Name
-                    </Heading>
-                    <Link color="blue" fontSize="13px">
-                        @pseudo
-                    </Link>
-                    <Text fontSize="13px" color={useColorModeValue("grey-blue", "white")}>
-                        Joined Date
-                    </Text>
-                </Flex>
+        <Flex
+            direction={["column", "column", "column", "row"]}
+            w="100%"
+            h="100%"
+            fontFamily="space mono"
+            alignItems="flex-start"
+            pl={["20px", "40px", "40px", 0]}
+            pr={["20px", "40px", "40px", 0]}
+        >
+            <Flex direction="column" mt="48px" display={["none", "none", "none", "flex"]} ml="48px" h="100%" w="117px">
+                <Image
+                    borderRadius="full"
+                    boxSize={["70px", "117px"]}
+                    src="https://bit.ly/dan-abramov"
+                    alt="Dan Abramov"
+                />
+            </Flex>
+            <Flex
+                direction="column"
+                justifyContent="flex-start"
+                alignItems="flex-start"
+                w={["100%", "100%", "100%", "480px"]}
+                ml={[0, 0, 0, "37px"]}
+            >
+                {/* profile icon + name + username + joined date div */}
+                <Summary />
+                {/* description div  */}
+                <Description />
+                {/* stats div  */}
+                <Stats />
+                {/* Socials links */}
+                <Socials />
             </Flex>
         </Flex>
     );
