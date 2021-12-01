@@ -3,7 +3,6 @@ import { Flex, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { Header } from "./Header";
 import { Profile } from "./Profile";
 import { SearchBar } from "./SearchBar";
-import { SocialsComponent } from "./Socials";
 
 export const HomePage = () => {
     const { toggleColorMode, colorMode } = useColorMode();
@@ -19,7 +18,6 @@ export const HomePage = () => {
             <Header />
             <SearchBar />
             <Profile />
-            <SocialsComponent />
         </Flex>
     );
 };
