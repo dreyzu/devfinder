@@ -9,7 +9,7 @@ export const Header = () => {
             mt="31px"
             mx="24px"
             mb="36px"
-            w={["300px", "573px", "730px"]}
+            w={["300px", "573px", "573px", "730px"]}
             h="38px"
             alignItems="flex-start"
             justifyContent="center"
