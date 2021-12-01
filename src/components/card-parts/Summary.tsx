@@ -37,7 +37,7 @@ export const Summary = () => {
             </Flex>
             <Spacer display={["none", "none", "none", "flex"]} />
             {/* desktop only */}
-            <Flex display={["none", "none", "none", "flex"]} mt="7px">
+            <Flex display={["none", "none", "none", "flex"]} mb="25px">
                 <Text fontSize={["13px", "16px", "16px", "15px"]} color={useColorModeValue("grey-blue", "white")}>
                     Joined Date
                 </Text>
