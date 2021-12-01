@@ -13,7 +13,6 @@ export const Profile = () => {
             alignItems="flex-start"
             justifyContent="center"
             background={useColorModeValue("white", "blue-high")}
-            mb="100px"
         ></Flex>
     );
 };
