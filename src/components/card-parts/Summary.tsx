@@ -13,6 +13,7 @@ export const Summary = () => {
             justifyContent="flex-start"
             alignItems={["center", "center", "center", "flex-start"]}
         >
+            {/* Image for mobile only, up to tablet devices */}
             <Image
                 borderRadius="full"
                 boxSize={["70px", "117px"]}
