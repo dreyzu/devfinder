@@ -13,22 +13,18 @@ export const Header = () => {
             h="38px"
             alignItems="flex-start"
             justifyContent="center"
+            fontFamily="space mono"
+            fontWeight="bold"
+            fontSize="13px"
+            color={useColorModeValue("pale-blue", "white")}
         >
             <Text fontFamily="space mono" fontWeight="bold" fontSize="26px">
                 devfinder
             </Text>
             <Spacer />
             <Box display="flex" w="78px" h="20px" flexDir="row" mt="10px">
-                <Text
-                    fontFamily="space mono"
-                    fontWeight="bold"
-                    fontSize="13px"
-                    color={useColorModeValue("pale-blue", "white")}
-                >
-                    {colorMode === "light" ? "DARK" : "LIGHT"}
-                </Text>
-
                 <ToggleButton isround="yes" w="25px" h="25px" ml="16px" alignSelf="center" onClick={toggleColorMode}>
+                    <Text mr="16px">{colorMode === "light" ? "DARK" : "LIGHT"}</Text>
                     {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                 </ToggleButton>
             </Box>
