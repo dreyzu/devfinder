@@ -2,6 +2,8 @@ import "@fontsource/space-mono";
 
 import { Flex, Icon, useColorMode, useColorModeValue } from "@chakra-ui/react";
 
+import { Card } from "./Card";
+
 export const Profile = () => {
     const { toggleColorMode, colorMode } = useColorMode();
     return (
@@ -13,7 +15,9 @@ export const Profile = () => {
             alignItems="flex-start"
             justifyContent="center"
             background={useColorModeValue("white", "blue-high")}
-        ></Flex>
+        >
+            <Card />
+        </Flex>
     );
 };
 
