@@ -11,7 +11,7 @@ export const Summary = () => {
             fontFamily="space mono"
             fontSize={["13px", "16px"]}
             justifyContent="flex-start"
-            alignItems="center"
+            alignItems={["center", "center", "center", "flex-start"]}
         >
             <Image
                 borderRadius="full"
@@ -37,7 +37,7 @@ export const Summary = () => {
             </Flex>
             <Spacer display={["none", "none", "none", "flex"]} />
             {/* desktop only */}
-            <Flex display={["none", "none", "none", "flex"]} mb="25px">
+            <Flex display={["none", "none", "none", "flex"]} mt="5px">
                 <Text fontSize={["13px", "16px", "16px", "15px"]} color={useColorModeValue("grey-blue", "white")}>
                     Joined Date
                 </Text>
