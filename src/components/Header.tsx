@@ -25,11 +25,11 @@ export const Header = () => {
                     fontSize="13px"
                     color={useColorModeValue("pale-blue", "white")}
                 >
-                    {"light" ? "DARK" : "LIGHT"}
+                    {"light" ? "LIGHT" : "DARK"}
                 </Text>
 
                 <ToggleButton isround="yes" w="25px" h="25px" ml="16px" alignSelf="center" onClick={toggleColorMode}>
-                    {"light" ? <MoonIcon /> : <SunIcon />}
+                    {"light" ? <SunIcon /> : <MoonIcon />}
                 </ToggleButton>
             </Box>
         </Flex>
