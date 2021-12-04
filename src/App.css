@@ -1,5 +1,3 @@
-html,
-body,
-#root {
-    height: 100%;
+body {
+    background: #141d2f !important;
 }
