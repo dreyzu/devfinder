@@ -6,7 +6,7 @@ export const theme = extendTheme({
     config: {
         initialColorMode:
             window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
-        useSystemColorMode: false,
+        useSystemColorMode: true,
     },
     colors: {
         blue: "#0079FF",
