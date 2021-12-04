@@ -17,16 +17,15 @@ export const SearchBar = () => {
     const { toggleColorMode, colorMode } = useColorMode();
     return (
         <Flex
-            mx="24px"
             mb="16px"
             w={["300px", "573px", "573px", "730px"]}
             h="60px"
             minHeight="60px"
             justifyContent="center"
             alignItems="center"
-            border="0px"
             borderRadius="15px"
             background={useColorModeValue("white", "blue-high")}
+            id="searchbar"
         >
             <FormControl>
                 <Flex>
