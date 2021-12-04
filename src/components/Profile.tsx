@@ -14,7 +14,7 @@ export const Profile = () => {
             background={useColorModeValue("white", "blue-high")}
             id="profile"
             py="48px"
-            mb={["50px", "150px", 0]}
+            mb="50px"
         >
             <Card />
         </Flex>
