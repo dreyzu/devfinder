@@ -7,7 +7,6 @@ export const Summary = () => {
         <Flex
             w={["230px", "350px", "350px", "100%"]}
             h={["70px", "117px", "117px", "auto"]}
-            mt={["32px", "40px", "40px", "48px"]}
             fontFamily="space mono"
             fontSize={["13px", "16px"]}
             justifyContent="flex-start"
