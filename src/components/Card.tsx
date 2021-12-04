@@ -13,7 +13,6 @@ export const Card = () => {
         <Flex
             direction={["column", "column", "column", "row"]}
             w="100%"
-            h="100%"
             fontFamily="space mono"
             alignItems="flex-start"
             pl={["20px", "40px", "40px", 0]}
