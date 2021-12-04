@@ -9,12 +9,12 @@ export const Profile = () => {
     return (
         <Flex
             w={["300px", "573px", "573px", "730px"]}
-            h={["517px", "481px", "481px", "419px"]}
-            minHeight="419px"
             borderRadius="15px"
             alignItems="flex-start"
-            justifyContent="center"
             background={useColorModeValue("white", "blue-high")}
+            id="profile"
+            py="48px"
+            mb={["50px", "150px", 0]}
         >
             <Card />
         </Flex>
