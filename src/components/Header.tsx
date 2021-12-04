@@ -7,16 +7,15 @@ export const Header = () => {
     return (
         <Flex
             mt="31px"
-            mx="24px"
             mb="36px"
             w={["300px", "573px", "573px", "730px"]}
-            h="38px"
             alignItems="flex-start"
             justifyContent="center"
             fontFamily="space mono"
             fontWeight="bold"
             fontSize="13px"
             color={useColorModeValue("pale-blue", "white")}
+            id="header"
         >
             <Text fontFamily="space mono" fontWeight="bold" fontSize="26px">
                 devfinder
