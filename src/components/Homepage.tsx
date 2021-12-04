@@ -10,10 +10,9 @@ export const HomePage = () => {
         <Flex
             direction="column"
             alignItems="center"
-            justifyContent="flex-start"
-            background={useColorModeValue("grey-white", "marine-blue")}
-            h="100vh"
+            bg={useColorModeValue("grey-white", "marine-blue")}
             w="100%"
+            minHeight="100%"
         >
             <Header />
             <SearchBar />
