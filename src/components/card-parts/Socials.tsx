@@ -17,7 +17,7 @@ export const Socials = () => {
                 </Flex>
                 <Flex mt={["16px", "19px", "19px"]}>
                     {/* website */}
-                    <WebsiteIcon />
+                    <WebsiteIcon w="20px" />
                     <Link href="https://github.blog" ml="2">
                         https://github.blog
                     </Link>
@@ -25,14 +25,14 @@ export const Socials = () => {
             </Flex>
 
             <Flex direction="column" ml={[0, "100px"]}>
-                <Flex mt={["16px", 0]} opacity="50%">
+                <Flex mt={["16px", 0]} opacity="50%" alignItems="center">
                     {/* twitter */}
-                    <TwitterIcon />
+                    <TwitterIcon h="20px" />
                     <Link ml="2">Not available</Link>
                 </Flex>
                 {/* company */}
                 <Flex mt={["16px", "19px", "19px"]}>
-                    <CompanyIcon />
+                    <CompanyIcon w="20px" />
                     <Text ml="2">@github</Text>
                 </Flex>
             </Flex>
