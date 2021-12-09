@@ -18,12 +18,12 @@ export const Socials = () => {
                 </Flex>
                 <Flex mt={["1.6em", "1.9em", "1.9em"]}>
                     {/* website */}
-                    <WebsiteIcon w="2em" />
+                    <WebsiteIcon w="2em" h="2em" />
                     <Link href="https://github.blog">https://github.blog</Link>
                 </Flex>
             </Flex>
 
-            <Flex direction="column" ml={[0, 0, "10em"]}>
+            <Flex direction="column" ml={[0, 0, "5em", "5em"]}>
                 <Flex mt={["1.6em", "1.6em", 0, 0]} opacity="50%" alignItems="center">
                     {/* twitter */}
                     <TwitterIcon w="2em" h="2em" />
