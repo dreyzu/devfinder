@@ -12,7 +12,7 @@ const breakpoints = createBreakpoints({
 });
 
 export const theme = extendTheme({
-    breakpoints,
+    breakpoints: breakpoints,
     config: {
         initialColorMode:
             window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
