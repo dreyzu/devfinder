@@ -7,8 +7,8 @@ export const Header = () => {
     const { toggleColorMode, colorMode } = useColorMode();
     return (
         <Flex
-            mt="3.1em"
             w={["30em", "32.7em", "57.3em", "73em"]}
+            mt="3.1em"
             alignItems="flex-start"
             justifyContent="center"
             fontFamily="space mono"
