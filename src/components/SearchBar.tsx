@@ -21,7 +21,7 @@ export const SearchBar = () => {
         <Flex
             mt="3.6em"
             w={["30em", "32.7em", "57.3em", "73em"]}
-            minHeight="6rem"
+            minHeight="6em"
             justifyContent="center"
             alignItems="center"
             borderRadius="1.5rem"
