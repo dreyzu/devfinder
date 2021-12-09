@@ -13,13 +13,14 @@ import {
     useColorModeValue,
 } from "@chakra-ui/react";
 
+// conversion to em or rem is done but still need to check on figma for real sizes
 export const SearchBar = () => {
     const { toggleColorMode, colorMode } = useColorMode();
 
     return (
         <Flex
-            mb="1.6rem"
-            w={["30rem", "57.3rem", "57.3rem", "73rem"]}
+            mt="3.6em"
+            w={["30em", "32.7em", "57.3em", "73em"]}
             minHeight="6rem"
             justifyContent="center"
             alignItems="center"
@@ -29,23 +30,25 @@ export const SearchBar = () => {
         >
             <FormControl>
                 <Flex alignItems="center">
-                    <InputGroup id="input">
+                    <InputGroup id="input" ml="1.6rem" mr="0.8rem">
                         <InputLeftElement
                             pointerEvents="none"
-                            children={<SearchIcon ml={["1.6rem", "3.2rem"]} w="2rem" minHeight="2rem" />}
+                            w="2rem"
+                            h="2rem"
+                            children={<SearchIcon w="2rem" h="2rem" />}
                         />
                         <Input
                             placeholder="Search GitHub username..."
                             variant="unstyled"
-                            ml={["1rem", "0.8rem", "2.4rem"]}
-                            fontSize="1.8rem"
                             fontFamily="space mono"
+                            fontSize={["1.1rem", "1.3rem", "1.8rem"]}
                             _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
                             type="search"
                         />
                     </InputGroup>
                     <Spacer display={["none", "none", "flex"]} />
                     <Button
+                        p={0}
                         w={["8.4rem", "10.6rem"]}
                         mr="0.8rem"
                         minHeight="4rem"

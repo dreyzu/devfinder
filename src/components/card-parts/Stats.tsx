@@ -1,33 +1,47 @@
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
 
+// conversion to em or rem is done but still need to check on figma for real sizes
 export const Stats = () => {
     return (
         <Flex
-            borderRadius="10px"
+            borderRadius="1em"
             background={useColorModeValue("grey-white", "marine-blue")}
             justifyContent="space-around"
             alignItems="center"
-            mt="23px"
-            h="85px"
+            mt="2.3em"
+            h="8.5em"
             w="100%"
-            px="15px"
-            fontSize={["11px", "13px"]}
+            px="1.5em"
+            // check theses sizes
+            fontSize={["1.1rem", "1.3rem"]}
         >
             <Flex direction="column" alignItems={["center", "flex-start", "Flex-start"]}>
                 <Text color={useColorModeValue("pale-blue", "white")}>Repos</Text>
-                <Text fontSize={["12px", "22px"]} fontWeight="bold" color={useColorModeValue("grey-black", "white")}>
+                <Text
+                    fontSize={["1.2rem", "2.2rem"]}
+                    fontWeight="bold"
+                    color={useColorModeValue("grey-black", "white")}
+                >
                     8
                 </Text>
             </Flex>
             <Flex direction="column" alignItems={["center", "flex-start", "Flex-start"]}>
                 <Text color={useColorModeValue("pale-blue", "white")}>Followers</Text>
-                <Text fontSize={["12px", "22px"]} fontWeight="bold" color={useColorModeValue("grey-black", "white")}>
+                <Text
+                    fontSize={["1.2rem", "2.2rem"]}
+                    fontWeight="bold"
+                    color={useColorModeValue("grey-black", "white")}
+                >
                     3938
                 </Text>
             </Flex>
             <Flex direction="column" alignItems={["center", "flex-start", "Flex-start"]}>
                 <Text color={useColorModeValue("pale-blue", "white")}>Following</Text>
-                <Text fontSize={["12px", "22px"]} fontWeight="bold" color={useColorModeValue("grey-black", "white")}>
+                <Text
+                    fontSize={["1.2rem", "2.2rem"]}
+                    fontWeight="bold"
+                    color={useColorModeValue("grey-black", "white")}
+                >
                     9
                 </Text>
             </Flex>

@@ -1,39 +1,38 @@
 import { Flex, Icon, Link, Text, Wrap, useColorModeValue } from "@chakra-ui/react";
 
+//conversion to em is done but still need to check figma files for real sizes.
 export const Socials = () => {
     return (
         <Flex
             direction={["column", "row", "row"]}
-            mt="24px"
-            fontSize={["13px", "15px", "15px"]}
+            mt="2.4em"
+            fontSize={["1rem", "1.3rem", "1.5rem"]}
             color={useColorModeValue("pale-blue", "white")}
             w="100%"
         >
             <Flex direction="column">
                 {/* location */}
                 <Flex>
-                    <LocationIcon w="20px" />
-                    <Text ml="2">San Francisco</Text>
+                    <LocationIcon w="2em" h="2em" />
+                    <Text>San Francisco</Text>
                 </Flex>
-                <Flex mt={["16px", "19px", "19px"]}>
+                <Flex mt={["1.6em", "1.9em", "1.9em"]}>
                     {/* website */}
-                    <WebsiteIcon w="20px" />
-                    <Link href="https://github.blog" ml="2">
-                        https://github.blog
-                    </Link>
+                    <WebsiteIcon w="2em" />
+                    <Link href="https://github.blog">https://github.blog</Link>
                 </Flex>
             </Flex>
 
-            <Flex direction="column" ml={[0, "100px"]}>
-                <Flex mt={["16px", 0]} opacity="50%" alignItems="center">
+            <Flex direction="column" ml={[0, "10em"]}>
+                <Flex mt={["1.6em", 0]} opacity="50%" alignItems="center">
                     {/* twitter */}
-                    <TwitterIcon h="20px" />
-                    <Link ml="2">Not available</Link>
+                    <TwitterIcon w="2em" h="2em" />
+                    <Link>Not available</Link>
                 </Flex>
                 {/* company */}
-                <Flex mt={["16px", "19px", "19px"]}>
-                    <CompanyIcon w="20px" />
-                    <Text ml="2">@github</Text>
+                <Flex mt={["1.6em", "1.9em"]}>
+                    <CompanyIcon w="2em" h="2em" />
+                    <Text>@github</Text>
                 </Flex>
             </Flex>
         </Flex>
@@ -43,7 +42,7 @@ export const Socials = () => {
 // Location Icon svg
 export const LocationIcon = ({ ...props }) => {
     return (
-        <Icon w="14px" h="20px" {...props}>
+        <Icon w="20px" h="20px" {...props}>
             <path
                 d="M12.797 3.425C11.584 1.33 9.427.05 7.03.002a7.483 7.483 0 00-.308 0C4.325.05 2.17 1.33.955 3.425a6.963 6.963 0 00-.09 6.88l4.959 9.077.007.012c.218.38.609.606 1.045.606.437 0 .828-.226 1.046-.606l.007-.012 4.96-9.077a6.963 6.963 0 00-.092-6.88zm-5.92 5.638c-1.552 0-2.813-1.262-2.813-2.813s1.261-2.812 2.812-2.812S9.69 4.699 9.69 6.25 8.427 9.063 6.876 9.063z"
                 fill="#4b6a9b"

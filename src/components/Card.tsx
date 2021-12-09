@@ -8,6 +8,7 @@ import { Socials } from "./card-parts/Socials";
 import { Stats } from "./card-parts/Stats";
 import { Summary } from "./card-parts/Summary";
 
+// conversion to em or rem is done but still need to check on figma for real sizes
 export const Card = () => {
     return (
         <Flex
@@ -15,8 +16,8 @@ export const Card = () => {
             w="100%"
             fontFamily="space mono"
             alignItems="flex-start"
-            pl={["20px", "40px", "40px", 0]}
-            pr={["20px", "40px", "40px", 0]}
+            pl={["2em", "2em", "4em", 0]}
+            pr={["2em", "2em", "4em", 0]}
         >
             {/* ImageDiv is for desktop device only */}
             <ImageDiv />
@@ -24,8 +25,8 @@ export const Card = () => {
                 direction="column"
                 justifyContent="flex-start"
                 alignItems="flex-start"
-                w={["100%", "100%", "100%", "480px"]}
-                ml={[0, 0, 0, "37px"]}
+                w={["100%", "100%", "100%", "48em"]}
+                ml={[0, 0, 0, "3.7em"]}
             >
                 {/* profile icon + name + username + joined date div */}
                 <Summary />
