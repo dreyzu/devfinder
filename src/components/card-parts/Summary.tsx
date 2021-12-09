@@ -17,21 +17,23 @@ export const Summary = () => {
             {/* Image for mobile only, up to tablet devices */}
             <Image
                 borderRadius="full"
-                boxSize={["7em", "11.7em"]}
+                boxSize={["70px", "117px"]}
                 src="https://bit.ly/dan-abramov"
                 alt="Dan Abramov"
                 display={["flex", "flex", "flex", "none"]}
             />
             <Flex direction="column" ml={["2em", "2em", "2em", 0]}>
                 <Heading
-                    fontSize={["1.6em", "2.6em"]}
+                    fontSize={["1.6em", "1.6em", "2.6em"]}
                     fontWeight="bold"
                     fontFamily="space mono"
                     color={useColorModeValue("grey-black", "white")}
                 >
                     Name
                 </Heading>
-                <Text color="blue">@pseudo</Text>
+                <Text color="blue" fontSize={["1.1rem", "1.3rem", "1.6rem"]}>
+                    @pseudo
+                </Text>
                 {/* mobile/tablet only */}
                 <Flex display={["flex", "flex", "flex", "none"]}>
                     <Text color={useColorModeValue("grey-blue", "white")} fontSize={["1.1rem", "1.3rem"]}>
@@ -42,7 +44,7 @@ export const Summary = () => {
             <Spacer display={["none", "none", "none", "flex"]} />
             {/* desktop only */}
             <Flex display={["none", "none", "none", "flex"]} mt="0.5em">
-                <Text fontSize="1.5rem" color={useColorModeValue("grey-blue", "white")}>
+                <Text fontSize="1.6rem" color={useColorModeValue("grey-blue", "white")}>
                     Joined Date
                 </Text>
             </Flex>
