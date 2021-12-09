@@ -18,25 +18,27 @@ export const SearchBar = () => {
 
     return (
         <Flex
-            mb="16px"
-            w={["300px", "573px", "573px", "730px"]}
-            h="60px"
-            minHeight="60px"
+            mb="1.6rem"
+            w={["30rem", "57.3rem", "57.3rem", "73rem"]}
+            minHeight="6rem"
             justifyContent="center"
             alignItems="center"
-            borderRadius="15px"
+            borderRadius="1.5rem"
             background={useColorModeValue("white", "blue-high")}
             id="searchbar"
         >
             <FormControl>
-                <Flex>
-                    <InputGroup w={["210px", "455px", "455px", "600px"]}>
-                        <InputLeftElement pointerEvents="none" children={<SearchIcon ml={["16px", "32px"]} />} />
+                <Flex alignItems="center">
+                    <InputGroup id="input">
+                        <InputLeftElement
+                            pointerEvents="none"
+                            children={<SearchIcon ml={["1.6rem", "3.2rem"]} w="2rem" minHeight="2rem" />}
+                        />
                         <Input
                             placeholder="Search GitHub username..."
                             variant="unstyled"
-                            ml={["8px", "24px"]}
-                            fontSize={["10px", "18px"]}
+                            ml={["1rem", "0.8rem", "2.4rem"]}
+                            fontSize="1.8rem"
                             fontFamily="space mono"
                             _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
                             type="search"
@@ -44,13 +46,15 @@ export const SearchBar = () => {
                     </InputGroup>
                     <Spacer display={["none", "none", "flex"]} />
                     <Button
-                        w={["84px", "106px"]}
-                        mr={[0, 0, "8px"]}
-                        borderRadius="10px"
+                        w={["8.4rem", "10.6rem"]}
+                        mr="0.8rem"
+                        minHeight="4rem"
+                        borderRadius="1rem"
                         background="blue"
                         color="white"
                         type="submit"
                         id="button"
+                        fontSize="1.4rem"
                     >
                         Search
                     </Button>
