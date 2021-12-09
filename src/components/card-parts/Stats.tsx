@@ -12,8 +12,7 @@ export const Stats = () => {
             h="8.5em"
             w="100%"
             px="1.5em"
-            // check theses sizes
-            fontSize={["1.1rem", "1.3rem"]}
+            fontSize={["1.1rem", "1.1rem", "1.3rem", "null"]}
         >
             <Flex direction="column" alignItems={["center", "flex-start", "Flex-start"]}>
                 <Text color={useColorModeValue("pale-blue", "white")}>Repos</Text>
