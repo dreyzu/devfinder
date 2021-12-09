@@ -15,6 +15,7 @@ import {
 
 export const SearchBar = () => {
     const { toggleColorMode, colorMode } = useColorMode();
+
     return (
         <Flex
             mb="16px"
@@ -49,6 +50,7 @@ export const SearchBar = () => {
                         background="blue"
                         color="white"
                         type="submit"
+                        id="button"
                     >
                         Search
                     </Button>
