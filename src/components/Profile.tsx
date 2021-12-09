@@ -15,7 +15,7 @@ export const Profile = () => {
             background={useColorModeValue("white", "blue-high")}
             id="profile"
             py="4.8em"
-            mb="5empx"
+            mb="14.5em"
             mt="1.6em"
         >
             <Card />
