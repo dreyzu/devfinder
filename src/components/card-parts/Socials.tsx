@@ -4,7 +4,7 @@ import { Flex, Icon, Link, Text, Wrap, useColorModeValue } from "@chakra-ui/reac
 export const Socials = () => {
     return (
         <Flex
-            direction={["column", "row", "row"]}
+            direction={["column", "column", "row", "row"]}
             mt="2.4em"
             fontSize={["1rem", "1.3rem", "1.5rem"]}
             color={useColorModeValue("pale-blue", "white")}
@@ -23,8 +23,8 @@ export const Socials = () => {
                 </Flex>
             </Flex>
 
-            <Flex direction="column" ml={[0, "10em"]}>
-                <Flex mt={["1.6em", 0]} opacity="50%" alignItems="center">
+            <Flex direction="column" ml={[0, 0, "10em"]}>
+                <Flex mt={["1.6em", "1.6em", 0, 0]} opacity="50%" alignItems="center">
                     {/* twitter */}
                     <TwitterIcon w="2em" h="2em" />
                     <Link>Not available</Link>
