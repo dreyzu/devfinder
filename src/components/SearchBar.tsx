@@ -24,18 +24,18 @@ export const SearchBar = () => {
             minHeight="6em"
             justifyContent="center"
             alignItems="center"
-            borderRadius="1.5rem"
+            borderRadius="1.5em"
             background={useColorModeValue("white", "blue-high")}
             id="searchbar"
         >
             <FormControl>
                 <Flex alignItems="center">
-                    <InputGroup id="input" ml="1.6rem" mr="0.8rem">
+                    <InputGroup id="input" ml="1.6em" mr="0.8em">
                         <InputLeftElement
                             pointerEvents="none"
                             w="2rem"
                             h="2rem"
-                            children={<SearchIcon w="2rem" h="2rem" />}
+                            children={<SearchIcon w="2em" h="2em" />}
                         />
                         <Input
                             placeholder="Search GitHub username..."
@@ -49,10 +49,10 @@ export const SearchBar = () => {
                     <Spacer display={["none", "none", "flex"]} />
                     <Button
                         p={0}
-                        w={["8.4rem", "10.6rem"]}
-                        mr="0.8rem"
-                        minHeight="4rem"
-                        borderRadius="1rem"
+                        w={["8.4em", "10.6em"]}
+                        mr="0.8em"
+                        minHeight="4em"
+                        borderRadius="1em"
                         background="blue"
                         color="white"
                         type="submit"
