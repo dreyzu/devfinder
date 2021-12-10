@@ -4,10 +4,10 @@ export const Socials = () => {
     return (
         <Flex
             direction={["column", "column", "row", "row"]}
-            mt="24px"
             fontSize={["1rem", "1.3rem", "1.5rem"]}
             color={useColorModeValue("pale-blue", "white")}
             w="100%"
+            mt={["24px", "24px", "30px", "37px"]}
         >
             <Flex direction="column">
                 {/* location */}
