@@ -5,7 +5,7 @@ import { Flex, Heading, Image, Spacer, Text, useColorModeValue } from "@chakra-u
 export const Summary = () => {
     return (
         <Flex
-            w={["230px", "350px"]}
+            w={["230px", "350px", "480px"]}
             h={["70px", "70px", "117px", "auto"]}
             fontFamily="space mono"
             fontSize={["1.1rem", "1.3rem", "1.6rem"]}
