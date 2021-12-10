@@ -3,16 +3,16 @@ import "@fontsource/space-mono";
 import { extendTheme } from "@chakra-ui/react";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 
-//need to change this
 const breakpoints = createBreakpoints({
-    sm: "32em",
-    md: "76.8em",
-    lg: "144em",
-    xl: "256em",
+    sm: "375px",
+    md: "768px",
+    lg: "1440px",
+    xl: "2650px",
+    "2xl": "4000px",
 });
 
 export const theme = extendTheme({
-    breakpoints: { breakpoints },
+    breakpoints,
     config: {
         initialColorMode:
             window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
