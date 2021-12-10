@@ -1,9 +1,9 @@
+:root {
+    font-size: 62.5%;
+}
+
 body {
     background: #141d2f !important;
     overflow-x: hidden;
-}
-
-html {
-    /* 16px */
-    font-size: 62.5%;
+    font-size: 1.6rem;
 }
