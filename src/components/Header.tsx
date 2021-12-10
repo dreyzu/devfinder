@@ -7,7 +7,6 @@ export const Header = () => {
     return (
         <Flex
             w={["300px", "327px", "573px", "730px"]}
-            mt="31px"
             alignItems="flex-start"
             justifyContent="center"
             fontFamily="space mono"
