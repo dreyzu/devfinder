@@ -1,14 +1,13 @@
 import "@fontsource/space-mono";
 
-import { Box, Button, Flex, Heading, Icon, Spacer, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Flex, Icon, Spacer, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
 
-// conversion to em or rem is done but still need to check on figma for real sizes
 export const Header = () => {
     const { toggleColorMode, colorMode } = useColorMode();
     return (
         <Flex
-            w={["30em", "32.7em", "57.3em", "73em"]}
-            mt="3.1em"
+            w={["300px", "327px", "573px", "730px"]}
+            mt="31px"
             alignItems="flex-start"
             justifyContent="center"
             fontFamily="space mono"

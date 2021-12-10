@@ -1,11 +1,10 @@
 import { Flex, Icon, Link, Text, Wrap, useColorModeValue } from "@chakra-ui/react";
 
-//conversion to em is done but still need to check figma files for real sizes.
 export const Socials = () => {
     return (
         <Flex
             direction={["column", "column", "row", "row"]}
-            mt="2.4em"
+            mt="24px"
             fontSize={["1rem", "1.3rem", "1.5rem"]}
             color={useColorModeValue("pale-blue", "white")}
             w="100%"
@@ -13,25 +12,25 @@ export const Socials = () => {
             <Flex direction="column">
                 {/* location */}
                 <Flex>
-                    <LocationIcon w="2em" h="2em" />
+                    <LocationIcon w="20px" h="20px" />
                     <Text>San Francisco</Text>
                 </Flex>
-                <Flex mt={["1.6em", "1.9em", "1.9em"]}>
+                <Flex mt={["16px", "19px", "19px", "19px"]}>
                     {/* website */}
-                    <WebsiteIcon w="2em" h="2em" />
+                    <WebsiteIcon w="20px" h="20px" />
                     <Link href="https://github.blog">https://github.blog</Link>
                 </Flex>
             </Flex>
 
             <Flex direction="column" ml={[0, 0, "5em", "5em"]}>
-                <Flex mt={["1.6em", "1.6em", 0, 0]} opacity="50%" alignItems="center">
+                <Flex mt={["16px", "16px", 0, 0]} opacity="50%" alignItems="center">
                     {/* twitter */}
-                    <TwitterIcon w="2em" h="2em" />
+                    <TwitterIcon w="20px" h="20px" />
                     <Link>Not available</Link>
                 </Flex>
                 {/* company */}
-                <Flex mt={["1.6em", "1.9em"]}>
-                    <CompanyIcon w="2em" h="2em" />
+                <Flex mt={["16px", "19px"]}>
+                    <CompanyIcon w="20px" h="20px" />
                     <Text>@github</Text>
                 </Flex>
             </Flex>

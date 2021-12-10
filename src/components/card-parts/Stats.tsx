@@ -8,10 +8,10 @@ export const Stats = () => {
             background={useColorModeValue("grey-white", "marine-blue")}
             justifyContent="space-around"
             alignItems="center"
-            mt="2.3em"
-            h="8.5em"
+            mt="23px"
+            h="85px"
             w="100%"
-            px="1.5em"
+            px="15px"
             fontSize={["1.1rem", "1.1rem", "1.3rem", "null"]}
         >
             <Flex direction="column" alignItems={["center", "flex-start", "Flex-start"]}>

@@ -1,16 +1,15 @@
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
 
-// conversion to em or rem is done but still need to check on figma for real sizes
 export const Description = () => {
     return (
         <Flex
-            mt={["3.3em", "2.4em", "2.4em", "2em"]}
-            h="7.5em"
+            mt={["33px", "33px", "24px", "20px"]}
+            h="75px"
             w="100%"
             alignItems="center"
-            fontSize={["1.2em", "1.5em"]}
+            fontSize={["1.2rem", "1.5rem"]}
         >
-            <Text lineHeight="2.5em" color={useColorModeValue("pale-blue", "white")}>
+            <Text lineHeight="25px" color={useColorModeValue("pale-blue", "white")}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio. Quisque volutpat mattis eros.
             </Text>
         </Flex>
