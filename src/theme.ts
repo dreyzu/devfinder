@@ -1,8 +1,7 @@
 import "@fontsource/space-mono";
 
-import { extendTheme } from "@chakra-ui/react";
+import { ThemeConfig, extendTheme } from "@chakra-ui/react";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
-import { mode } from "@chakra-ui/theme-tools";
 
 const breakpoints = createBreakpoints({
     sm: "375px",
@@ -12,12 +11,14 @@ const breakpoints = createBreakpoints({
     "2xl": "4000px",
 });
 
+const config: ThemeConfig = {
+    initialColorMode: "system",
+    useSystemColorMode: false,
+};
+
 export const theme = extendTheme({
     breakpoints,
-    config: {
-        initialColorMode: "system",
-        useSystemColorMode: false,
-    },
+    config,
     colors: {
         blue: "#0079FF",
         white: "#FEFEFE",
