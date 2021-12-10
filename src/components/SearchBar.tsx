@@ -29,13 +29,14 @@ export const SearchBar = () => {
         >
             <FormControl>
                 <Flex alignItems="center">
-                    <InputGroup id="input" ml="16px" mr="8px" minHeight="25px">
+                    <InputGroup id="input" ml="16px" mr="8px" h="25px" w={["190px", "213px", "400px"]}>
                         <InputLeftElement pointerEvents="none" children={<SearchIcon w="20px" h="20px" />} />
                         <Input
+                            ml={["8px", "8.95px", "15px"]}
                             placeholder="Search GitHub username..."
                             variant="unstyled"
                             fontFamily="space mono"
-                            fontSize={["11px", "13px", "18px"]}
+                            fontSize={["10px", "11px", "18px"]}
                             _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
                             type="search"
                         />
@@ -43,8 +44,8 @@ export const SearchBar = () => {
                     <Spacer display={["none", "none", "flex"]} />
                     <Button
                         p={0}
-                        w={["80px", "84px", "106px"]}
-                        mr="8px"
+                        w={["70px", "80px", "84px", "106px"]}
+                        mr={[0, 0, "8px", "8px"]}
                         minHeight="40px"
                         borderRadius="10px"
                         background="blue"
