@@ -17,6 +17,5 @@ function App({ children, ...props }) {
         </QueryClientProvider>
     );
 }
-console.log(theme.breakpoints);
-console.log(`we'll see again tomorrow.`);
+
 export default App;
