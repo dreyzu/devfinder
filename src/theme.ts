@@ -2,6 +2,7 @@ import "@fontsource/space-mono";
 
 import { extendTheme } from "@chakra-ui/react";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
+import { mode } from "@chakra-ui/theme-tools";
 
 const breakpoints = createBreakpoints({
     sm: "375px",
