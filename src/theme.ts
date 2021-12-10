@@ -14,9 +14,8 @@ const breakpoints = createBreakpoints({
 export const theme = extendTheme({
     breakpoints,
     config: {
-        initialColorMode:
-            window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
-        useSystemColorMode: true,
+        initialColorMode: "system",
+        useSystemColorMode: false,
     },
     colors: {
         blue: "#0079FF",
