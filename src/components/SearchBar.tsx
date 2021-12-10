@@ -29,7 +29,7 @@ export const SearchBar = () => {
         >
             <FormControl>
                 <Flex alignItems="center">
-                    <InputGroup id="input" ml="16px" h="25px" w={["190px", "213px", "455px", "585px"]}>
+                    <InputGroup id="input" ml="16px" h="25px" w={["205px", "222px", "455px", "585px"]}>
                         <InputLeftElement pointerEvents="none" children={<SearchIcon w="20px" h="20px" />} />
                         <Input
                             ml={["8px", "8.95px", "15px"]}
@@ -45,7 +45,7 @@ export const SearchBar = () => {
                     <Button
                         p={0}
                         w={["70px", "80px", "84px", "106px"]}
-                        mr={[0, 0, "8px", "8px"]}
+                        mr={["7px", "7px", "10px", "10px"]}
                         minHeight="40px"
                         borderRadius="10px"
                         background="blue"
@@ -53,6 +53,7 @@ export const SearchBar = () => {
                         type="submit"
                         id="button"
                         fontSize="1.4rem"
+                        fontFamily="space mono"
                     >
                         Search
                     </Button>
