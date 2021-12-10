@@ -22,7 +22,7 @@ export const Socials = () => {
                 </Flex>
             </Flex>
 
-            <Flex direction="column" ml={[0, 0, "5em", "5em"]}>
+            <Flex direction="column" ml={[0, 0, "110px", "110px"]}>
                 <Flex mt={["16px", "16px", 0, 0]} opacity="50%" alignItems="center">
                     {/* twitter */}
                     <TwitterIcon w="20px" h="20px" />
