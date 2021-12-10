@@ -5,7 +5,7 @@ import { Profile } from "./Profile";
 import { SearchBar } from "./SearchBar";
 
 export const HomePage = () => {
-    const { toggleColorMode, colorMode } = useColorMode();
+    const { toggleColorMode } = useColorMode();
     return (
         <Flex direction="column" alignItems="center" bg={useColorModeValue("grey-white", "marine-blue")} w="100%">
             <Header />
