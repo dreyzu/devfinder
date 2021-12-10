@@ -4,6 +4,7 @@ import {
     Button,
     Flex,
     FormControl,
+    FormErrorMessage,
     Icon,
     Input,
     InputGroup,
@@ -40,6 +41,7 @@ export const SearchBar = () => {
                             _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
                             type="search"
                         />
+                        <FormErrorMessage color="#F74646">No results</FormErrorMessage>
                     </InputGroup>
                     <Spacer display={["none", "none", "flex"]} />
                     <Button
@@ -54,6 +56,7 @@ export const SearchBar = () => {
                         id="button"
                         fontSize="1.4rem"
                         fontFamily="space mono"
+                        _hover={{ bg: "#60ABFF" }}
                     >
                         Search
                     </Button>
