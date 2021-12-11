@@ -5,4 +5,9 @@
 body {
     overflow-x: hidden;
     font-size: 1.6rem;
+    height: 100vh;
+}
+
+#root {
+    height: 100%;
 }
