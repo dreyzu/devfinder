@@ -1,13 +1,18 @@
-import { Flex, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Flex, useColorModeValue } from "@chakra-ui/react";
 
 import { Header } from "./Header";
 import { Profile } from "./Profile";
 import { SearchBar } from "./SearchBar";
 
 export const HomePage = () => {
-    const { toggleColorMode } = useColorMode();
     return (
-        <Flex direction="column" alignItems="center" bg={useColorModeValue("grey-white", "marine-blue")} w="100%">
+        <Flex
+            direction="column"
+            alignItems="center"
+            bg={useColorModeValue("grey-white", "marine-blue")}
+            w="100%"
+            h="100%"
+        >
             <Header />
             <SearchBar />
             <Profile />
