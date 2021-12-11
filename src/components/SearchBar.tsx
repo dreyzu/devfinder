@@ -15,8 +15,6 @@ import {
 } from "@chakra-ui/react";
 
 export const SearchBar = () => {
-    const { toggleColorMode, colorMode } = useColorMode();
-
     return (
         <Flex
             mt="36px"
