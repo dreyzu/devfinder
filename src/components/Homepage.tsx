@@ -11,7 +11,7 @@ export const HomePage = () => {
             alignItems="center"
             bg={useColorModeValue("grey-white", "marine-blue")}
             w="100%"
-            h="100%"
+            minHeight="100%"
         >
             <Header />
             <SearchBar />
