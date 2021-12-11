@@ -1,11 +1,10 @@
 import "@fontsource/space-mono";
 
-import { Flex, Icon, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Flex, useColorMode, useColorModeValue } from "@chakra-ui/react";
 
 import { Card } from "./Card";
 
 export const Profile = () => {
-    const { toggleColorMode, colorMode } = useColorMode();
     return (
         <Flex
             w={["300px", "327px", "573px", "730px"]}
