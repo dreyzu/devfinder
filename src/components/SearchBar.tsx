@@ -17,7 +17,7 @@ import {
 export const SearchBar = () => {
     return (
         <Flex
-            mt="36px"
+            mt={["36px", "36px", "44px", "36px"]}
             w={["300px", "327px", "573px", "730px"]}
             minHeight="60px"
             justifyContent="center"
