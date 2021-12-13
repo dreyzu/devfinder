@@ -45,7 +45,7 @@ export const Summary = () => {
             {/* desktop only */}
             <Flex display={["none", "none", "none", "flex"]} mt="5px">
                 <Text fontSize="1.6rem" color={useColorModeValue("grey-blue", "white")}>
-                    Joined Date
+                    Joined 25 Jan 2011
                 </Text>
             </Flex>
         </Flex>
