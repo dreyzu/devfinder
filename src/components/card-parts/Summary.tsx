@@ -17,10 +17,11 @@ export const Summary = () => {
             <Image
                 borderRadius="full"
                 boxSize={["70px", "70px", "117px"]}
-                src="https://bit.ly/dan-abramov"
-                alt="Dan Abramov"
+                src="../../../assets/octocat-profilepic.png"
+                alt="default profile picture"
                 display={["flex", "flex", "flex", "none"]}
             />
+
             <Flex direction="column" ml={["20px", "20px", "20px", 0]}>
                 <Heading
                     fontSize={["1.6rem", "1.6rem", "2.6rem"]}
@@ -28,15 +29,15 @@ export const Summary = () => {
                     fontFamily="space mono"
                     color={useColorModeValue("grey-black", "white")}
                 >
-                    Name
+                    The Octocat
                 </Heading>
                 <Text color="blue" fontSize={["1.1rem", "1.3rem", "1.6rem"]}>
-                    @pseudo
+                    @octocat
                 </Text>
                 {/* mobile/tablet only */}
                 <Flex display={["flex", "flex", "flex", "none"]}>
                     <Text color={useColorModeValue("grey-blue", "white")} fontSize={["1.1rem", "1.3rem"]}>
-                        Joined Date
+                        Joined 25 Jan 2011
                     </Text>
                 </Flex>
             </Flex>

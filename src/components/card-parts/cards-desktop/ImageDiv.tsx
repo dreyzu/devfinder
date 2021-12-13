@@ -5,7 +5,12 @@ import { Flex, Image } from "@chakra-ui/react";
 export const ImageDiv = () => {
     return (
         <Flex direction="column" display={["none", "none", "none", "flex"]} ml="48px" h="100%" w="117px">
-            <Image borderRadius="full" boxSize="117px" src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
+            <Image
+                borderRadius="full"
+                boxSize="117px"
+                src="../../../assets/octocat-profilepic.png"
+                alt="default profile picture"
+            />
         </Flex>
     );
 };
