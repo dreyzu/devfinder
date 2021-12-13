@@ -13,12 +13,14 @@ export const Socials = () => {
                 {/* location */}
                 <Flex>
                     <LocationIcon w="20px" h="20px" />
-                    <Text>San Francisco</Text>
+                    <Text pl="16px">San Francisco</Text>
                 </Flex>
                 <Flex mt={["16px", "19px", "19px", "19px"]}>
                     {/* website */}
                     <WebsiteIcon w="20px" h="20px" />
-                    <Link href="https://github.blog">https://github.blog</Link>
+                    <Link href="https://github.blog" pl="16px">
+                        https://github.blog
+                    </Link>
                 </Flex>
             </Flex>
 
@@ -26,12 +28,12 @@ export const Socials = () => {
                 <Flex mt={["16px", "16px", 0, 0]} opacity="50%" alignItems="center">
                     {/* twitter */}
                     <TwitterIcon w="20px" h="20px" />
-                    <Link>Not available</Link>
+                    <Link pl="16px">Not available</Link>
                 </Flex>
                 {/* company */}
                 <Flex mt={["16px", "19px"]}>
                     <CompanyIcon w="20px" h="20px" />
-                    <Text>@github</Text>
+                    <Text pl="16px">@github</Text>
                 </Flex>
             </Flex>
         </Flex>
