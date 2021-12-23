@@ -3,8 +3,6 @@
 This is a solution to the [GitHub user search app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6). 
 
 ## Table of contents
-
-- [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
@@ -12,13 +10,8 @@ This is a solution to the [GitHub user search app challenge on Frontend Mentor](
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-## Overview
-
-Soon to be added
 
 ### The challenge
 
@@ -33,17 +26,15 @@ Users should be able to:
 
 ### Screenshot
 
-will be added as soon as the project is finished
-![](./screenshot.jpg)
+![screenshot](https://i.ibb.co/zQwp4BB/Capture-d-cran-2021-12-23-142501.png)
 
 ### Links
 
-will be added as soon as the project is finished
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [livesite](https://devfinder-dreyzu.vercel.app/)
 
 ## My process
 
-will be added as soon as the project is finished
+Mobile-first design then working with the api
 
 ### Built with
 
@@ -54,15 +45,11 @@ will be added as soon as the project is finished
 
 ### What I learned
 
-will be added as soon as the project is finished
+I learned React context, useState, mobile-first workflow, and working with API.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-### Useful resources
-
-- [GitHub user API](https://docs.github.com/en/rest/reference/users#get-a-user) - This helped me learning APIs
+I'm going to work more on javascript/typescript then work more on React. 
 
 ## Author
 
