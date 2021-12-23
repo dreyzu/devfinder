@@ -1,6 +1,6 @@
 import "@fontsource/space-mono";
 
-import { Flex, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Flex, useColorModeValue } from "@chakra-ui/react";
 
 import { Card } from "./Card";
 
