@@ -32,7 +32,7 @@ export const Socials = () => {
                 </Flex>
             </Flex>
 
-            <Flex direction="column" pl={[0, 0, "200px"]}>
+            <Flex direction="column" pl={[0, 0, "150px"]}>
                 <Flex
                     mt={["16px", "16px", 0, 0]}
                     opacity={data?.twitter_username ? "100%" : "50%"}
