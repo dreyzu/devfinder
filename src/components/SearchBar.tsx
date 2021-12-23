@@ -10,11 +10,20 @@ import {
     InputGroup,
     InputLeftElement,
     Spacer,
-    useColorMode,
     useColorModeValue,
 } from "@chakra-ui/react";
+import { ThemeContext } from "@emotion/react";
+import { useContext, useState } from "react";
+
+import { DataContext } from "./DataContext";
+import * as api from "./usersApi";
 
 export const SearchBar = () => {
+    // search input
+    const [search, setSearch] = useState("");
+    const { setData } = useContext(DataContext);
+    const [error, setError] = useState(null);
+
     return (
         <Flex
             mt={["36px", "36px", "44px", "36px"]}
@@ -33,13 +42,14 @@ export const SearchBar = () => {
                         <Input
                             ml={["8px", "8.95px", "15px"]}
                             placeholder="Search GitHub username..."
+                            id="username"
+                            type="search"
                             variant="unstyled"
                             fontFamily="space mono"
                             fontSize={["10px", "11px", "18px"]}
                             _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
-                            type="search"
+                            onChange={(e) => setSearch(e.target.value)}
                         />
-                        <FormErrorMessage color="#F74646">No results</FormErrorMessage>
                     </InputGroup>
                     <Spacer display={["none", "none", "flex"]} />
                     <Button
@@ -55,6 +65,7 @@ export const SearchBar = () => {
                         fontSize="1.4rem"
                         fontFamily="space mono"
                         _hover={{ bg: "#60ABFF" }}
+                        onClick={() => api.getUser(search).then(setData).catch(setError)}
                     >
                         Search
                     </Button>
