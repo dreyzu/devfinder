@@ -1,6 +1,10 @@
 import { Flex, Icon, Link, Text, Wrap, useColorModeValue } from "@chakra-ui/react";
+import { useContext } from "react";
+
+import { DataContext } from "../DataContext";
 
 export const Socials = () => {
+    const { data, setData } = useContext(DataContext);
     return (
         <Flex
             direction={["column", "column", "row", "row"]}
@@ -11,29 +15,43 @@ export const Socials = () => {
         >
             <Flex direction="column">
                 {/* location */}
-                <Flex>
+                <Flex opacity={data?.location ? "100%" : "50%"} alignItems={["center", "center", "flex-start"]}>
                     <LocationIcon w="20px" h="20px" />
-                    <Text pl="16px">San Francisco</Text>
+                    <Text pl="16px">{data?.location ? data.location : "Not Available"}</Text>
                 </Flex>
-                <Flex mt={["16px", "19px", "19px", "19px"]}>
+                <Flex
+                    mt={["16px", "19px", "19px", "19px"]}
+                    opacity={data?.blog ? "100%" : "50%"}
+                    alignItems={["center", "center", "flex-start"]}
+                >
                     {/* website */}
                     <WebsiteIcon w="20px" h="20px" />
-                    <Link href="https://github.blog" pl="16px">
-                        https://github.blog
+                    <Link href={data?.blog} pl="16px" isExternal>
+                        {data?.blog ? "Website" : "Not Available"}
                     </Link>
                 </Flex>
             </Flex>
 
-            <Flex direction="column" ml={[0, 0, "110px", "110px"]}>
-                <Flex mt={["16px", "16px", 0, 0]} opacity="50%" alignItems="center">
+            <Flex direction="column" pl={[0, 0, "200px"]}>
+                <Flex
+                    mt={["16px", "16px", 0, 0]}
+                    opacity={data?.twitter_username ? "100%" : "50%"}
+                    alignItems={["center", "center", "flex-start"]}
+                >
                     {/* twitter */}
                     <TwitterIcon w="20px" h="20px" />
-                    <Link pl="16px">Not available</Link>
+                    <Link pl="16px" href="https://twitter.com/">
+                        {data?.twitter_username ? data.twitter_username : "Not Available"}
+                    </Link>
                 </Flex>
                 {/* company */}
-                <Flex mt={["16px", "19px"]}>
+                <Flex
+                    mt={["16px", "19px"]}
+                    opacity={data?.company ? "100%" : "50%"}
+                    alignItems={["center", "center", "none"]}
+                >
                     <CompanyIcon w="20px" h="20px" />
-                    <Text pl="16px">@github</Text>
+                    <Text pl="16px">{data?.company ? `@${data.company}` : "Not Available"}</Text>
                 </Flex>
             </Flex>
         </Flex>

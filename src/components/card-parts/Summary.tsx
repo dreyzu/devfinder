@@ -1,8 +1,17 @@
 import "@fontsource/space-mono";
 
 import { Flex, Heading, Image, Spacer, Text, useColorModeValue } from "@chakra-ui/react";
+import { useContext } from "react";
+
+import { DataContext } from "../DataContext";
 
 export const Summary = () => {
+    const { data, setData } = useContext(DataContext);
+    const date = new Date(data?.created_at).toLocaleDateString("en-gb", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+    });
     return (
         <Flex
             w={["287px", "287px", "350px", "480px"]}
@@ -17,8 +26,9 @@ export const Summary = () => {
             <Image
                 borderRadius="full"
                 boxSize={["70px", "70px", "117px"]}
-                src="../../../assets/octocat-profilepic.png"
-                alt="default profile picture"
+                src={data?.avatar_url}
+                fallbackSrc="../../../assets/octocat-profilepic.png"
+                alt="GitHub's user profile picture"
                 display={["flex", "flex", "flex", "none"]}
             />
 
@@ -29,15 +39,15 @@ export const Summary = () => {
                     fontFamily="space mono"
                     color={useColorModeValue("grey-black", "white")}
                 >
-                    The Octocat
+                    {data?.name ? data.name : "no name"}
                 </Heading>
                 <Text color="blue" fontSize={["1.1rem", "1.3rem", "1.6rem"]}>
-                    @octocat
+                    {"@" + data?.login}
                 </Text>
                 {/* mobile/tablet only */}
                 <Flex display={["flex", "flex", "flex", "none"]}>
                     <Text color={useColorModeValue("grey-blue", "white")} fontSize={["1.1rem", "1.3rem"]}>
-                        Joined 25 Jan 2011
+                        {"Joined " + date}
                     </Text>
                 </Flex>
             </Flex>
@@ -45,7 +55,7 @@ export const Summary = () => {
             {/* desktop only */}
             <Flex display={["none", "none", "none", "flex"]} mt="5px">
                 <Text fontSize="1.6rem" color={useColorModeValue("grey-blue", "white")}>
-                    Joined 25 Jan 2011
+                    {"Joined " + date}
                 </Text>
             </Flex>
         </Flex>

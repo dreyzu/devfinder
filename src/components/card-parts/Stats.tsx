@@ -1,7 +1,12 @@
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
+import { useContext } from "react";
+import { useQuery } from "react-query";
 
-// conversion to em or rem is done but still need to check on figma for real sizes
+import { DataContext } from "../DataContext";
+
 export const Stats = () => {
+    const { data, setData } = useContext(DataContext);
+
     return (
         <Flex
             borderRadius="1em"
@@ -21,7 +26,7 @@ export const Stats = () => {
                     fontWeight="bold"
                     color={useColorModeValue("grey-black", "white")}
                 >
-                    8
+                    {data?.public_repos ? data.public_repos : "0"}
                 </Text>
             </Flex>
             <Flex direction="column" pl={[0, 0, "99px"]} alignItems={["center", "center", "flex-start"]}>
@@ -31,7 +36,7 @@ export const Stats = () => {
                     fontWeight="bold"
                     color={useColorModeValue("grey-black", "white")}
                 >
-                    3938
+                    {data?.followers ? data.followers : "0"}
                 </Text>
             </Flex>
             <Flex direction="column" pl={[0, 0, "82px"]} alignItems={["center", "center", "flex-start"]}>
@@ -41,7 +46,7 @@ export const Stats = () => {
                     fontWeight="bold"
                     color={useColorModeValue("grey-black", "white")}
                 >
-                    9
+                    {data?.following ? data.following : "0"}
                 </Text>
             </Flex>
         </Flex>
