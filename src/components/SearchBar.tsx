@@ -5,6 +5,7 @@ import {
     Flex,
     FormControl,
     FormErrorMessage,
+    FormHelperText,
     Icon,
     Input,
     InputGroup,
@@ -35,7 +36,7 @@ export const SearchBar = () => {
             background={useColorModeValue("white", "blue-high")}
             id="searchbar"
         >
-            <FormControl>
+            <FormControl isInvalid={error}>
                 <Flex alignItems="center">
                     <InputGroup id="input" ml="16px" h="25px" w={["205px", "222px", "455px", "585px"]}>
                         <InputLeftElement pointerEvents="none" children={<SearchIcon w="20px" h="20px" />} />
@@ -50,6 +51,16 @@ export const SearchBar = () => {
                             _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
                             onChange={(e) => setSearch(e.target.value)}
                         />
+                        {!error ? null : (
+                            <FormErrorMessage
+                                fontFamily="space mono"
+                                fontSize={["1rem", "1rem", "1.2rem"]}
+                                w={["150px", "150px", "100px"]}
+                                p={["5px", "5px", 0, 0]}
+                            >
+                                No results
+                            </FormErrorMessage>
+                        )}
                     </InputGroup>
                     <Spacer display={["none", "none", "flex"]} />
                     <Button
