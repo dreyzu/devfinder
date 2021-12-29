@@ -14,7 +14,6 @@ export const Header = () => {
             fontWeight="bold"
             color={useColorModeValue("pale-blue", "white")}
             id="header"
-            role="header"
         >
             <Text
                 fontFamily="space mono"
