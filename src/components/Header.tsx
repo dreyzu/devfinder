@@ -14,12 +14,14 @@ export const Header = () => {
             fontWeight="bold"
             color={useColorModeValue("pale-blue", "white")}
             id="header"
+            role="header"
         >
             <Text
                 fontFamily="space mono"
                 fontWeight="bold"
                 fontSize="2.6rem"
                 color={useColorModeValue("#222731", "white")}
+                as="h1"
             >
                 devfinder
             </Text>

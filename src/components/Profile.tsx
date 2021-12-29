@@ -15,6 +15,7 @@ export const Profile = () => {
             py="48px"
             mb="145px"
             mt={["16px", "16px", "15px", "29px"]}
+            role="main"
         >
             <Card />
         </Flex>
