@@ -13,8 +13,8 @@ export const Stats = () => {
             background={useColorModeValue("grey-white", "marine-blue")}
             justifyContent={["space-between", "space-between", "initial"]}
             alignItems="center"
-            mt="23px"
             px={["15px", "15px", 0]}
+            mt="10px"
             h="85px"
             w="100%"
             fontSize={["1.1rem", "1.1rem", "1.3rem", "null"]}
