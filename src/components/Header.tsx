@@ -27,7 +27,7 @@ export const Header = () => {
             <Spacer />
             <Box alignSelf="center">
                 <ToggleButton alignSelf="center" onClick={toggleColorMode}>
-                    <Text fontSize="1.3rem">{colorMode === "light" ? "DARK" : "LIGHT"}</Text>
+                    {colorMode === "light" ? "DARK" : "LIGHT"}
                     {colorMode === "light" ? <MoonIcon ml="1rem" /> : <SunIcon ml="1rem" />}
                 </ToggleButton>
             </Box>
@@ -53,6 +53,7 @@ const ToggleButton = ({ children, ...props }) => {
             _focus={{
                 boxShadow: "none",
             }}
+            fontSize="1.3rem"
             {...props}
         >
             {children}
