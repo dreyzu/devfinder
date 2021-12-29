@@ -15,7 +15,7 @@ export const Description = () => {
             opacity={data?.bio ? "100%" : "50%"}
         >
             <Text lineHeight="25px" color={useColorModeValue("pale-blue", "white")}>
-                {data?.bio ? data.bio : "This user has no bio"}
+                {data?.bio ? data.bio : "This profile has no bio"}
             </Text>
         </Flex>
     );
