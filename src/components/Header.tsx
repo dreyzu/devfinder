@@ -26,7 +26,7 @@ export const Header = () => {
             </Text>
             <Spacer />
             <Box alignSelf="center">
-                <ToggleButton isround="yes" alignSelf="center" onClick={toggleColorMode}>
+                <ToggleButton alignSelf="center" onClick={toggleColorMode}>
                     <Text fontSize="1.3rem">{colorMode === "light" ? "DARK" : "LIGHT"}</Text>
                     {colorMode === "light" ? <MoonIcon ml="1rem" /> : <SunIcon ml="1rem" />}
                 </ToggleButton>
