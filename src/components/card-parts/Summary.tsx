@@ -1,6 +1,6 @@
 import "@fontsource/space-mono";
 
-import { Flex, Heading, Image, Spacer, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Link, Spacer, Text, useColorModeValue } from "@chakra-ui/react";
 import { useContext } from "react";
 
 import { DataContext } from "../DataContext";
@@ -41,9 +41,15 @@ export const Summary = () => {
                 >
                     {data?.name ? data.name : "no name"}
                 </Heading>
-                <Text color="blue" fontSize={["1.1rem", "1.3rem", "1.6rem"]}>
-                    {"@" + data?.login}
-                </Text>
+                <Box color="blue" fontSize={["1.1rem", "1.3rem", "1.6rem"]}>
+                    {data?.login ? (
+                        <Link href={`https://github.com/${data.login}`} isExternal>
+                            {"@" + data.login}
+                        </Link>
+                    ) : (
+                        <Box>no name</Box>
+                    )}
+                </Box>
                 {/* mobile/tablet only */}
                 <Flex display={["flex", "flex", "flex", "none"]}>
                     <Text color={useColorModeValue("grey-blue", "white")} fontSize={["1.1rem", "1.3rem"]}>
