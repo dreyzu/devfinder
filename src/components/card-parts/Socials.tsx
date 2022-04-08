@@ -1,4 +1,4 @@
-import { Flex, Icon, Link, Text, Wrap, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Icon, Link, Text, Wrap, useColorModeValue } from "@chakra-ui/react";
 import { useContext } from "react";
 
 import { DataContext } from "../DataContext";
@@ -26,9 +26,13 @@ export const Socials = () => {
                 >
                     {/* website */}
                     <WebsiteIcon w="20px" h="20px" />
-                    <Link href={data?.blog} pl="16px" isExternal>
-                        {data?.blog ? "Website" : "Not Available"}
-                    </Link>
+                    {data?.blog ? (
+                        <Link href={data?.blog} pl="16px" isExternal>
+                            {data?.blog ? "Website" : "Not Available"}
+                        </Link>
+                    ) : (
+                        <Box pl="16px">Not Available</Box>
+                    )}
                 </Flex>
             </Flex>
 
@@ -40,9 +44,13 @@ export const Socials = () => {
                 >
                     {/* twitter */}
                     <TwitterIcon w="20px" h="20px" />
-                    <Link pl="16px" href="https://twitter.com/">
-                        {data?.twitter_username ? data.twitter_username : "Not Available"}
-                    </Link>
+                    {data?.twitter_username ? (
+                        <Link pl="16px" href={`https://twitter.com/${data.twitter_username}`} isExternal>
+                            {data.twitter_username}
+                        </Link>
+                    ) : (
+                        <Box pl="16px">Not Available</Box>
+                    )}
                 </Flex>
                 {/* company */}
                 <Flex
