@@ -5,7 +5,6 @@ import {
     Flex,
     FormControl,
     FormErrorMessage,
-    FormHelperText,
     Icon,
     Input,
     InputGroup,
@@ -26,63 +25,68 @@ export const SearchBar = () => {
     const [error, setError] = useState(null);
 
     return (
-        <Flex
-            mt={["36px", "36px", "44px", "36px"]}
-            w={["300px", "327px", "573px", "730px"]}
-            minHeight="60px"
-            justifyContent="center"
-            alignItems="center"
-            borderRadius="15px"
-            background={useColorModeValue("white", "blue-high")}
-            id="searchbar"
-        >
-            <FormControl isInvalid={error}>
-                <Flex alignItems="center">
-                    <InputGroup id="input" ml="16px" h="25px" w={["205px", "222px", "455px", "585px"]}>
-                        <InputLeftElement pointerEvents="none" children={<SearchIcon w="20px" h="20px" />} />
-                        <Input
-                            ml={["8px", "8.95px", "15px"]}
-                            placeholder="Search GitHub username..."
-                            id="username"
-                            type="search"
-                            variant="unstyled"
-                            fontFamily="space mono"
-                            fontSize={["10px", "11px", "18px"]}
-                            _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
-                            onChange={(e) => setSearch(e.target.value)}
-                        />
-                        {!error ? null : (
-                            <FormErrorMessage
+        <form>
+            <Flex
+                mt={["36px", "36px", "44px", "36px"]}
+                w={["300px", "327px", "573px", "730px"]}
+                minHeight="60px"
+                justifyContent="center"
+                alignItems="center"
+                borderRadius="15px"
+                background={useColorModeValue("white", "blue-high")}
+                id="searchbar"
+            >
+                <FormControl isInvalid={error}>
+                    <Flex alignItems="center">
+                        <InputGroup id="input" ml="16px" h="25px" w={["205px", "222px", "455px", "585px"]}>
+                            <InputLeftElement pointerEvents="none" children={<SearchIcon w="20px" h="20px" />} />
+                            <Input
+                                ml={["8px", "8.95px", "15px"]}
+                                placeholder="Search GitHub username..."
+                                id="username"
+                                type="search"
+                                variant="unstyled"
                                 fontFamily="space mono"
-                                fontSize={["1rem", "1rem", "1.2rem"]}
-                                w={["150px", "150px", "100px"]}
-                                p={["5px", "5px", 0, 0]}
-                            >
-                                No results
-                            </FormErrorMessage>
-                        )}
-                    </InputGroup>
-                    <Spacer display={["none", "none", "flex"]} />
-                    <Button
-                        p={0}
-                        w={["70px", "80px", "84px", "106px"]}
-                        mr={["7px", "7px", "10px", "10px"]}
-                        minHeight="40px"
-                        borderRadius="10px"
-                        background="blue"
-                        color="white"
-                        type="submit"
-                        id="button"
-                        fontSize="1.4rem"
-                        fontFamily="space mono"
-                        _hover={{ bg: "#60ABFF" }}
-                        onClick={() => api.getUser(search).then(setData).catch(setError)}
-                    >
-                        Search
-                    </Button>
-                </Flex>
-            </FormControl>
-        </Flex>
+                                fontSize={["10px", "11px", "18px"]}
+                                _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
+                                onChange={(e) => setSearch(e.target.value)}
+                            />
+                            {!error ? null : (
+                                <FormErrorMessage
+                                    fontFamily="space mono"
+                                    fontSize={["1rem", "1rem", "1.2rem"]}
+                                    w={["150px", "150px", "100px"]}
+                                    p={["5px", "5px", 0, 0]}
+                                >
+                                    No results
+                                </FormErrorMessage>
+                            )}
+                        </InputGroup>
+                        <Spacer display={["none", "none", "flex"]} />
+                        <Button
+                            p={0}
+                            w={["70px", "80px", "84px", "106px"]}
+                            mr={["7px", "7px", "10px", "10px"]}
+                            minHeight="40px"
+                            borderRadius="10px"
+                            background="blue"
+                            color="white"
+                            type="submit"
+                            id="button"
+                            fontSize="1.4rem"
+                            fontFamily="space mono"
+                            _hover={{ bg: "#60ABFF" }}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                api.getUser(search).then(setData).catch(setError);
+                            }}
+                        >
+                            Search
+                        </Button>
+                    </Flex>
+                </FormControl>
+            </Flex>
+        </form>
     );
 };
 
