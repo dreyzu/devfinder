@@ -53,7 +53,7 @@ I'm going to work more on javascript/typescript then work more on React.
 
 ## Author
 
-- Website - [Tristan Derez](https://portfolio-dreyzu.vercel.app/)
+- Website - [Tristan Derez](https://tristanderez.dev)
 - Frontend Mentor - [@dreyzu](https://www.frontendmentor.io/profile/dreyzu)
 - Twitter - [@doreizu](https://www.twitter.com/doreizu)
 - LinkedIn - [Tristan Derez](https://linkedin.com/in/tristan-derez)
