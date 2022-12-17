@@ -8,10 +8,7 @@ This is a solution to the [GitHub user search app challenge on Frontend Mentor](
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ### The challenge
 
@@ -42,14 +39,6 @@ Mobile-first design then working with the api
 - [React](https://reactjs.org/) - JS library
 - [Chakra-UI](https://chakra-ui.com/) - For styles
 - [Vite](https://vitejs.dev/)
-
-### What I learned
-
-I learned React context, useState, mobile-first workflow, and working with API.
-
-### Continued development
-
-I'm going to work more on javascript/typescript then work more on React. 
 
 ## Author
 
