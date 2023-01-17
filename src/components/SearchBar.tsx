@@ -23,6 +23,8 @@ export const SearchBar = () => {
     const [search, setSearch] = useState("");
     const { setData } = useContext(DataContext);
     const [error, setError] = useState(null);
+    
+    const handleChange = (e) => setSearch(e.target.value);
 
     return (
         <form>
@@ -49,7 +51,7 @@ export const SearchBar = () => {
                                 fontFamily="space mono"
                                 fontSize={["10px", "11px", "18px"]}
                                 _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
-                                onChange={(e) => setSearch(e.target.value)}
+                                onChange={handleChange}
                             />
                             {!error ? null : (
                                 <FormErrorMessage
