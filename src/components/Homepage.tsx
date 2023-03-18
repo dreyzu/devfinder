@@ -1,5 +1,5 @@
 import { Flex, useColorModeValue } from "@chakra-ui/react";
-import { createContext, useState } from "react";
+import { useState } from "react";
 
 import { DataContext } from "./DataContext";
 import { Header } from "./Header";
@@ -8,7 +8,7 @@ import { SearchBar } from "./SearchBar";
 
 export const HomePage = () => {
     const [data, setData] = useState(null);
-    console.log(data);
+
     return (
         <DataContext.Provider value={{ data, setData }}>
             <Flex
