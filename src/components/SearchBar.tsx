@@ -12,7 +12,6 @@ import {
     Spacer,
     useColorModeValue,
 } from "@chakra-ui/react";
-import { ThemeContext } from "@emotion/react";
 import { useContext, useState } from "react";
 
 import { DataContext } from "./DataContext";
@@ -23,7 +22,7 @@ export const SearchBar = () => {
     const [search, setSearch] = useState("");
     const { setData } = useContext(DataContext);
     const [error, setError] = useState(null);
-    
+
     const handleChange = (e) => setSearch(e.target.value);
 
     return (
