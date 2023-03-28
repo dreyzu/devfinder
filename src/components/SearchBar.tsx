@@ -23,7 +23,10 @@ export const SearchBar = () => {
     const { setData } = useContext(DataContext);
     const [error, setError] = useState(null);
 
-    const handleChange = (e) => setSearch(e.target.value);
+    const handleChange = (e) => {
+        setSearch(e.target.value);
+        setError(null);
+    };
 
     return (
         <form>
