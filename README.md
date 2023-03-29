@@ -4,9 +4,7 @@ This is a solution to the [GitHub user search app challenge on Frontend Mentor](
 
 ## Table of contents
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
 
@@ -19,19 +17,11 @@ Users should be able to:
 - Search for GitHub users by their username
 - See relevant user information based on their search
 - Switch between light and dark themes
-- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences.
-
-### Screenshot
-
-![screenshot](https://i.ibb.co/zQwp4BB/Capture-d-cran-2021-12-23-142501.png)
+- **Bonus**: Have the correct color scheme chosen for them based on their device preferences
 
 ### Links
 
 - Live Site URL: [livesite](https://devfinder-dreyzu.vercel.app/)
-
-## My process
-
-Mobile-first design then working with the api
 
 ### Built with
 
