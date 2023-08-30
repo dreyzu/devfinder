@@ -1,17 +1,17 @@
 import "@fontsource/space-mono";
 
 import { Box, Flex, Heading, Image, Link, Spacer, Text, useColorModeValue } from "@chakra-ui/react";
-import { useContext } from "react";
-
-import { DataContext } from "../DataContext";
+import useUserStore from "@/store/UserStore";
 
 export const Summary = () => {
-    const { data, setData } = useContext(DataContext);
-    const date = new Date(data?.created_at).toLocaleDateString("en-gb", {
+    const { user } = useUserStore();
+
+    const date = new Date(user.created_at).toLocaleDateString("en-gb", {
         year: "numeric",
         month: "short",
         day: "numeric",
     });
+
     return (
         <Flex
             w={["287px", "287px", "350px", "480px"]}
@@ -26,7 +26,7 @@ export const Summary = () => {
             <Image
                 borderRadius="full"
                 boxSize={["70px", "70px", "117px"]}
-                src={data?.avatar_url}
+                src={user.avatar_url}
                 fallbackSrc="../../../assets/octocat-profilepic.png"
                 alt="GitHub's user profile picture"
                 display={["flex", "flex", "flex", "none"]}
@@ -39,12 +39,12 @@ export const Summary = () => {
                     fontFamily="space mono"
                     color={useColorModeValue("grey-black", "white")}
                 >
-                    {data?.name ? data.name : "no name"}
+                    {user.name ? user.name : "no name"}
                 </Heading>
                 <Box color="blue" fontSize={["1.1rem", "1.3rem", "1.6rem"]}>
-                    {data?.login ? (
-                        <Link href={`https://github.com/${data.login}`} isExternal>
-                            {"@" + data.login}
+                    {user.login ? (
+                        <Link href={`https://github.com/${user.login}`} isExternal>
+                            {"@" + user.login}
                         </Link>
                     ) : (
                         <Box>no name</Box>

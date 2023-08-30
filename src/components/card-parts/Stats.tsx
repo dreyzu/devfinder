@@ -1,11 +1,8 @@
+import useUserStore from "@/store/UserStore";
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
-import { useContext } from "react";
-import { useQuery } from "react-query";
-
-import { DataContext } from "../DataContext";
 
 export const Stats = () => {
-    const { data, setData } = useContext(DataContext);
+    const { user } = useUserStore();
 
     return (
         <Flex
@@ -26,7 +23,7 @@ export const Stats = () => {
                     fontWeight="bold"
                     color={useColorModeValue("grey-black", "white")}
                 >
-                    {data?.public_repos ? data.public_repos : "0"}
+                    {user.public_repos}
                 </Text>
             </Flex>
             <Flex direction="column" pl={[0, 0, "99px"]} alignItems={["center", "center", "flex-start"]}>
@@ -36,7 +33,7 @@ export const Stats = () => {
                     fontWeight="bold"
                     color={useColorModeValue("grey-black", "white")}
                 >
-                    {data?.followers ? data.followers : "0"}
+                    {user.followers}
                 </Text>
             </Flex>
             <Flex direction="column" pl={[0, 0, "82px"]} alignItems={["center", "center", "flex-start"]}>
@@ -46,7 +43,7 @@ export const Stats = () => {
                     fontWeight="bold"
                     color={useColorModeValue("grey-black", "white")}
                 >
-                    {data?.following ? data.following : "0"}
+                    {user.following}
                 </Text>
             </Flex>
         </Flex>

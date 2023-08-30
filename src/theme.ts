@@ -1,15 +1,14 @@
 import "@fontsource/space-mono";
 
 import { ThemeConfig, extendTheme } from "@chakra-ui/react";
-import { createBreakpoints } from "@chakra-ui/theme-tools";
 
-const breakpoints = createBreakpoints({
+const breakpoints = {
     sm: "375px",
     md: "768px",
     lg: "1440px",
     xl: "2650px",
     "2xl": "4000px",
-});
+};
 
 const config: ThemeConfig = {
     initialColorMode: "system",

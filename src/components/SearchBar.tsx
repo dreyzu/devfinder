@@ -12,22 +12,29 @@ import {
     Spacer,
     useColorModeValue,
 } from "@chakra-ui/react";
-import { useContext, useState } from "react";
 
-import { DataContext } from "./DataContext";
-import * as api from "./usersApi";
+import { ChangeEvent, useState } from "react";
+import useUserStore from "@/store/UserStore";
 
 export const SearchBar = () => {
-    // search input
-    const [search, setSearch] = useState("");
-    const { setData } = useContext(DataContext);
-    const [error, setError] = useState(null);
+    const { searchQuery } = useUserStore();
+    const [error, setError] = useState(false);
+    const [searchInput, setSearchInput] = useState("");
 
-    const handleChange = (e) => {
-        setSearch(e.target.value);
-        setError(null);
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setError(false); // Reset the error when input changes
+        setSearchInput(event.target.value); // Update the searchInput state
     };
 
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        try {
+            await searchQuery(searchInput);
+        } catch (error: unknown) {
+            setError(true);
+        }
+    };
     return (
         <form>
             <Flex
@@ -48,14 +55,14 @@ export const SearchBar = () => {
                                 ml={["8px", "8.95px", "15px"]}
                                 placeholder="Search GitHub username..."
                                 id="username"
-                                type="search"
+                                type="text"
                                 variant="unstyled"
                                 fontFamily="space mono"
                                 fontSize={["10px", "11px", "18px"]}
                                 _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
                                 onChange={handleChange}
                             />
-                            {!error ? null : (
+                            {error && (
                                 <FormErrorMessage
                                     fontFamily="space mono"
                                     fontSize={["1rem", "1rem", "1.2rem"]}
@@ -80,10 +87,7 @@ export const SearchBar = () => {
                             fontSize="1.4rem"
                             fontFamily="space mono"
                             _hover={{ bg: "#60ABFF" }}
-                            onClick={(e) => {
-                                e.preventDefault();
-                                api.getUser(search).then(setData).catch(setError);
-                            }}
+                            onClick={handleSubmit}
                         >
                             Search
                         </Button>

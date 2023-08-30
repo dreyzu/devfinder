@@ -27,13 +27,9 @@ export const Card = () => {
                 w={["100%", "100%", "100%", "480px"]}
                 ml={[0, 0, 0, "37px"]}
             >
-                {/* profile icon + name + username + joined date div */}
                 <Summary />
-                {/* description div  */}
                 <Description />
-                {/* stats div  */}
                 <Stats />
-                {/* Socials links */}
                 <Socials />
             </Flex>
         </Flex>
