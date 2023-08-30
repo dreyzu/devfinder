@@ -2,6 +2,11 @@ import "@fontsource/space-mono";
 
 import { Box, Button, Flex, Icon, Spacer, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
 
+interface ToggleButtonProps {
+    children: React.ReactNode;
+    onClick: () => void;
+}
+
 export const Header = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     return (
@@ -26,7 +31,7 @@ export const Header = () => {
             </Text>
             <Spacer />
             <Box alignSelf="center">
-                <ToggleButton alignSelf="center" onClick={toggleColorMode}>
+                <ToggleButton onClick={toggleColorMode}>
                     {colorMode === "light" ? "DARK" : "LIGHT"}
                     {colorMode === "light" ? <MoonIcon ml="1rem" /> : <SunIcon ml="1rem" />}
                 </ToggleButton>
@@ -36,13 +41,14 @@ export const Header = () => {
 };
 
 // Toggle Light/Dark Mode Button
-const ToggleButton = ({ children, ...props }) => {
+const ToggleButton = ({ children, onClick, ...props }: ToggleButtonProps) => {
     return (
         <Button
             m={0}
             p={0}
             bg="none"
             aria-label="toggle light/dark mode"
+            alignSelf="center"
             variant="ghost"
             _hover={{ bg: "none", color: useColorModeValue("#222731", "#90A4D4") }}
             _active={{
@@ -54,6 +60,7 @@ const ToggleButton = ({ children, ...props }) => {
                 boxShadow: "none",
             }}
             fontSize="1.3rem"
+            onClick={onClick}
             {...props}
         >
             {children}
