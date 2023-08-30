@@ -55,7 +55,7 @@ export const Socials = () => {
                     alignItems={["center", "center", "none"]}
                 >
                     <CompanyIcon w="20px" h="20px" />
-                    <Text pl="16px">{user.company ? `@${user.company}` : "Not Available"}</Text>
+                    <Text pl="16px">{user.company ? user.company : "Not Available"}</Text>
                 </Flex>
             </Flex>
         </Flex>
