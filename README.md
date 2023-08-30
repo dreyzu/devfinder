@@ -29,6 +29,7 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [Chakra-UI](https://chakra-ui.com/) - For styles
 - [Vite](https://vitejs.dev/)
+- [Zustand](https://github.com/pmndrs/zustand)
 
 ## Author
 
