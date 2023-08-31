@@ -45,10 +45,9 @@ export const SearchBar = () => {
                 borderRadius="15px"
                 background={useColorModeValue("white", "blue-high")}
                 id="searchbar"
-                role="searchbox"
             >
                 <FormControl isInvalid={error}>
-                    <InputGroup h="100%" w="100%">
+                    <InputGroup h="100%" w="100%" role="searchbox">
                         <InputLeftElement w="20px" h="100%" pl="16px" pointerEvents="none" children={<SearchIcon />} />
                         <Input
                             fontSize={["0.688rem", "0.688rem", "1.125rem"]}
