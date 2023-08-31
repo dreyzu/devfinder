@@ -7,7 +7,7 @@ export const ImageDiv = () => {
     const { user } = useUserStore();
 
     return (
-        <Flex direction="column" display={["none", "none", "none", "flex"]} ml="48px" h="100%" w="117px">
+        <Flex display={["none", "none", "none", "flex"]}>
             <Image borderRadius="full" boxSize="117px" src={user.avatar_url} alt="GitHub's user profile picture" />
         </Flex>
     );

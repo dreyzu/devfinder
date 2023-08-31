@@ -1,9 +1,9 @@
 import "./App.css";
 
 import { ChakraProvider } from "@chakra-ui/react";
+import { theme } from "./theme";
 
 import { HomePage } from "./components/Homepage";
-import { theme } from "./theme";
 
 function App() {
     return (

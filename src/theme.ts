@@ -18,6 +18,10 @@ const config: ThemeConfig = {
 export const theme = extendTheme({
     breakpoints,
     config,
+    fonts: {
+        heading: `'space mono', monospaced`,
+        body: `'space mono', monospaced`,
+    },
     colors: {
         blue: "#0079FF",
         white: "#FEFEFE",

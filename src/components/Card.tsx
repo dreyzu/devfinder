@@ -1,5 +1,3 @@
-import "@fontsource/space-mono";
-
 import { Flex } from "@chakra-ui/react";
 
 import { ImageDiv } from "./card-parts/cards-desktop/ImageDiv";
@@ -10,14 +8,7 @@ import { Summary } from "./card-parts/Summary";
 
 export const Card = () => {
     return (
-        <Flex
-            direction={["column", "column", "column", "row"]}
-            w="100%"
-            fontFamily="space mono"
-            alignItems="flex-start"
-            pl={["20px", "20px", "40px", 0]}
-            pr={["20px", "20px", "40px", 0]}
-        >
+        <Flex direction={["column", "column", "column", "row"]} w="100%" alignItems="flex-start">
             {/* ImageDiv is for desktop device only */}
             <ImageDiv />
             <Flex

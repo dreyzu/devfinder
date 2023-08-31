@@ -6,14 +6,13 @@ export const Description = () => {
 
     return (
         <Flex
-            mt={["33px", "33px", "24px", "20px"]}
-            h="75px"
+            pt={["33px", "33px", "24px", "20px"]}
             w="100%"
             alignItems="center"
-            fontSize={["1.2rem", "1.3rem", "1.5rem"]}
+            fontSize={["0.813rem", "0.813rem", "0.938rem"]}
             opacity={user.bio ? "100%" : "50%"}
         >
-            <Text lineHeight="25px" color={useColorModeValue("pale-blue", "white")}>
+            <Text color={useColorModeValue("pale-blue", "white")}>
                 {user.bio ? user.bio : "This profile has no bio"}
             </Text>
         </Flex>

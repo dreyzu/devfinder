@@ -1,51 +1,59 @@
 import useUserStore from "@/store/UserStore";
-import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
+
+import { Flex, Text, HStack, useColorModeValue } from "@chakra-ui/react";
 
 export const Stats = () => {
     const { user } = useUserStore();
 
     return (
-        <Flex
+        <HStack
             borderRadius="1em"
             background={useColorModeValue("grey-white", "marine-blue")}
             justifyContent={["space-between", "space-between", "initial"]}
             alignItems="center"
-            px={["15px", "15px", 0]}
-            mt="10px"
+            px={["15px", "15px", "32px"]}
+            mt={["23px", "23px", "32px"]}
             h="85px"
+            spacing={[0, 0, "90px"]}
             w="100%"
-            fontSize={["1.1rem", "1.1rem", "1.3rem", "null"]}
+            fontSize={["1rem", "1rem", "1.375rem"]}
         >
-            <Flex direction="column" pl={["0px", "0px", "32px"]} alignItems={["center", "center", "flex-start"]}>
-                <Text color={useColorModeValue("pale-blue", "white")}>Repos</Text>
+            <Flex direction="column">
+                <Text color={useColorModeValue("pale-blue", "white")} fontSize={["0.688rem", "0.688rem", "0.813rem"]}>
+                    Repos
+                </Text>
                 <Text
-                    fontSize={["1.6rem", "1.6rem", "2.2rem"]}
                     fontWeight="bold"
+                    alignSelf={["center", "center", "flex-start"]}
                     color={useColorModeValue("grey-black", "white")}
                 >
                     {user.public_repos}
                 </Text>
             </Flex>
-            <Flex direction="column" pl={[0, 0, "99px"]} alignItems={["center", "center", "flex-start"]}>
-                <Text color={useColorModeValue("pale-blue", "white")}>Followers</Text>
+            <Flex direction="column">
+                <Text color={useColorModeValue("pale-blue", "white")} fontSize={["0.688rem", "0.688rem", "0.813rem"]}>
+                    Followers
+                </Text>
                 <Text
-                    fontSize={["1.6rem", "1.6rem", "2.2rem"]}
                     fontWeight="bold"
+                    alignSelf={["center", "center", "flex-start"]}
                     color={useColorModeValue("grey-black", "white")}
                 >
                     {user.followers}
                 </Text>
             </Flex>
-            <Flex direction="column" pl={[0, 0, "82px"]} alignItems={["center", "center", "flex-start"]}>
-                <Text color={useColorModeValue("pale-blue", "white")}>Following</Text>
+            <Flex direction="column">
+                <Text color={useColorModeValue("pale-blue", "white")} fontSize={["0.688rem", "0.688rem", "0.813rem"]}>
+                    Following
+                </Text>
                 <Text
-                    fontSize={["1.6rem", "1.6rem", "2.2rem"]}
                     fontWeight="bold"
+                    alignSelf={["center", "center", "flex-start"]}
                     color={useColorModeValue("grey-black", "white")}
                 >
                     {user.following}
                 </Text>
             </Flex>
-        </Flex>
+        </HStack>
     );
 };
