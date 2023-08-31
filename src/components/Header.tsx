@@ -13,6 +13,7 @@ export const Header = () => {
             fontWeight="bold"
             color={useColorModeValue("pale-blue", "white")}
             id="header"
+            role="banner"
         >
             <Text fontWeight="bold" fontSize={["1.625rem"]} color={useColorModeValue("#222731", "white")} as="h1">
                 devfinder
