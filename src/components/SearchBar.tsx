@@ -54,7 +54,7 @@ export const SearchBar = () => {
                             mr="5px"
                             placeholder="Search GitHub username..."
                             id="username"
-                            aria-aria-labelledby="Search user"
+                            aria-labelledby="Search user"
                             autoComplete="false"
                             type="search"
                             variant="unstyled"
