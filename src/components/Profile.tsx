@@ -7,7 +7,6 @@ export const Profile = () => {
         <Flex
             w={["300px", "327px", "573px", "730px"]}
             borderRadius="15px"
-            alignItems="flex-start"
             background={useColorModeValue("white", "blue-high")}
             id="profile"
             py="48px"
