@@ -47,14 +47,14 @@ export const SearchBar = () => {
                 id="searchbar"
             >
                 <FormControl isInvalid={error}>
-                    <InputGroup h="100%" w="100%" role="search" aria-label="Search user">
+                    <InputGroup h="100%" w="100%" role="search" id="Search-user" aria-label="Search-user">
                         <InputLeftElement w="20px" h="100%" pl="16px" pointerEvents="none" children={<SearchIcon />} />
                         <Input
                             fontSize={["0.688rem", "0.688rem", "1.125rem"]}
                             mr="5px"
                             placeholder="Search GitHub username..."
                             id="username"
-                            aria-labelledby="Search user"
+                            aria-labelledby="Search-user"
                             autoComplete="off"
                             type="search"
                             variant="unstyled"
