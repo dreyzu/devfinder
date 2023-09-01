@@ -31,7 +31,14 @@ export const Socials = () => {
                 >
                     <WebsiteIcon />
                     {user.blog ? (
-                        <Link href={user.blog} pl="16px">
+                        <Link
+                            href={
+                                user.blog.startsWith("http://") || user.blog.startsWith("https://")
+                                    ? user.blog
+                                    : `https://${user.blog}`
+                            }
+                            pl="16px"
+                        >
                             {user.blog.length < 25 ? user.blog : "Website"}
                         </Link>
                     ) : (
