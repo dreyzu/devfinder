@@ -64,10 +64,10 @@ export const SearchBar = () => {
                         />
                         {error && (
                             <FormErrorMessage
-                                margin={0}
                                 fontSize={["0.688rem", "0.688rem"]}
                                 w={["150px", "150px", "100px"]}
-                                pr="5px"
+                                mt="0"
+                                mr={["5px", "5px", "8px", "9px"]}
                                 alignSelf="center"
                             >
                                 No results
