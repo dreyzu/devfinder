@@ -53,8 +53,7 @@ const useUserStore = create<UserStore>((set) => ({
             const response = await baseAxios.get(username);
 
             if (response.status === 404) {
-                const errorObj: string = "User not found";
-                throw new Error(errorObj);
+                throw new Error("No results");
             }
 
             const data = await response.data;
@@ -79,8 +78,12 @@ const useUserStore = create<UserStore>((set) => ({
             };
 
             set({ user: { ...initialUserState, ...userFields } });
-        } catch (error: unknown) {
-            throw new Error("Internal error");
+        } catch (error: any) {
+            if (error.response && error.response.status === 404) {
+                throw new Error("No results");
+            }
+
+            throw error.message;
         }
     },
 }));
