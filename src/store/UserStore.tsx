@@ -83,7 +83,7 @@ const useUserStore = create<UserStore>((set) => ({
                 throw new Error("No results");
             }
 
-            throw error.message;
+            throw "Oops! try again";
         }
     },
 }));
