@@ -17,20 +17,24 @@ export const SearchBar = () => {
     const { searchQuery } = useUserStore();
 
     const [searchInput, setSearchInput] = useState("");
-    const [error, setError] = useState(false);
+    const [errorStatus, setErrorStatus] = useState(false);
+    const [errorMessage, setErrorMessage] = useState(""); //
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setError(false); // Reset the error when input changes
+        setErrorStatus(false); // Reset the error when input changes
         setSearchInput(event.target.value); // Update the searchInput state
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
+        const sanitizedInput = encodeURIComponent(searchInput);
+
         try {
-            await searchQuery(searchInput);
-        } catch (error: unknown) {
-            setError(true);
+            await searchQuery(sanitizedInput);
+        } catch (error: any) {
+            setErrorStatus(true);
+            setErrorMessage(error.message);
         }
     };
 
@@ -46,7 +50,7 @@ export const SearchBar = () => {
                 background={useColorModeValue("white", "blue-high")}
                 id="searchbar"
             >
-                <FormControl isInvalid={error}>
+                <FormControl isInvalid={errorStatus}>
                     <InputGroup h="100%" w="100%" role="search" id="Search-user" aria-label="Search-user">
                         <InputLeftElement w="20px" h="100%" pl="16px" pointerEvents="none" children={<SearchIcon />} />
                         <Input
@@ -62,7 +66,7 @@ export const SearchBar = () => {
                             _placeholder={{ color: useColorModeValue("pale-blue", "white") }}
                             onChange={handleChange}
                         />
-                        {error && (
+                        {errorStatus && (
                             <FormErrorMessage
                                 fontSize={["0.688rem", "0.688rem"]}
                                 w={["150px", "150px", "100px"]}
@@ -70,7 +74,7 @@ export const SearchBar = () => {
                                 mr={["5px", "5px", "8px", "9px"]}
                                 alignSelf="center"
                             >
-                                No results
+                                {errorMessage}
                             </FormErrorMessage>
                         )}
                         <Button
